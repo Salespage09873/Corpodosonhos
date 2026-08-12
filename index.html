@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformação 30 Dias - Curso de Emagrecimento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&h=1080&fit=crop') center/cover;
+            opacity: 0.2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.6);
+        }
+
+        /* Transformation Slider Section */
+        .transformation-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .transformation-section h2 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .slider-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .slider-wrapper {
+            position: relative;
+            width: 100%;
+            height: 500px;
+        }
+
+        .slider-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider-before {
+            clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+            z-index: 1;
+        }
+
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: white;
+            cursor: ew-resize;
+            z-index: 10;
+            transform: translateX(-50%);
+        }
+
+        .slider-handle::before {
+            content: '◀ ▶';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            color: #f5576c;
+            padding: 15px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .slider-labels {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 40px;
+            z-index: 5;
+        }
+
+        .slider-label {
+            background: rgba(255, 255, 255, 0.9);
+            color: #f5576c;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Features Section */
+        .features {
+            background: white;
+            padding: 80px 20px;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 80px 20px;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 60px;
+            font-weight: 700;
+        }
+
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .testimonial-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 5px solid #667eea;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .testimonial-name {
+            font-weight: 700;
+            color: #667eea;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-result {
+            color: #f5576c;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .pricing h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .pricing-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            opacity: 0.9;
+        }
+
+        .price-card {
+            background: white;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .price-card::before {
+            content: 'OFERTA ESPECIAL';
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .new-price {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .price-installments {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .price-features {
+            list-style: none;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .price-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            color: #333;
+        }
+
+        .price-features li:before {
+            content: '✓ ';
+            color: #667eea;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+
+        /* Guarantee Section */
+        .guarantee {
+            background: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .guarantee-badge {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.3);
+        }
+
+        .guarantee h3 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .guarantee p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .slider-wrapper {
+                height: 400px;
+            }
+
+            .transformation-section h2,
+            .features h2,
+            .testimonials h2,
+            .pricing h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Urgency Banner */
+        .urgency-banner {
+            background: linear-gradient(90deg, #ff6b6b, #feca57);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: flash 2s infinite;
+        }
+
+        @keyframes flash {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .countdown {
+            display: inline-block;
+            margin-left: 10px;
+            background: white;
+            color: #ff6b6b;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <!-- Urgency Banner -->
+    <div class="urgency-banner">
+        ⚠️ ÚLTIMAS VAGAS COM DESCONTO DE 70%! OFERTA TERMINA EM <span class="countdown" id="countdown">04:59:59</span>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>🔥 TRANSFORME SEU CORPO EM 30 DIAS! 🔥</h1>
+            <p>Curso 100% Online com Aulas Gravadas - Assista Quando e Onde Quiser!</p>
+            <p style="font-size: 1.2rem; margin-top: 20px; background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px;">
+                💪 Método Comprovado + 🥗 Plano Alimentar + 🎯 Exercícios em Casa
+            </p>
+            <a href="#pricing" class="cta-button">QUERO EMAGRECER AGORA!</a>
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.9;">
+                ⭐ Mais de 15.000 alunos transformados
+            </p>
+        </div>
+    </section>
+
+    <!-- Transformation Slider Section -->
+    <section class="transformation-section">
+        <h2>🎯 ARRASTE E VEJA SUA TRANSFORMAÇÃO EM 30 DIAS!</h2>
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <img src="https://images.unsplash.com/photo-1574680096141-1cddd32e04ca?w=800&h=500&fit=crop" alt="Depois - Corpo Saudável" class="slider-image">
+                <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=800&h=500&fit=crop" alt="Antes - Transformação" class="slider-image slider-before" id="beforeImage">
+                <div class="slider-handle" id="sliderHandle"></div>
+                <div class="slider-labels">
+                    <div class="slider-label">📅 HOJE</div>
+                    <div class="slider-label">🎉 DAQUI A 30 DIAS</div>
+                </div>
+            </div>
+        </div>
+        <p style="color: white; margin-top: 30px; font-size: 1.2rem; font-weight: 600;">
+            Essa pode ser a SUA história! Comece agora! 💪
+        </p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>🌟 POR QUE NOSSO CURSO É DIFERENTE?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📹</div>
+                <h3>Aulas 100% Gravadas</h3>
+                <p>Assista no seu ritmo, quando e onde quiser! Sem horários fixos, sem pressão. Acesso vitalício a todas as aulas!</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🥗</div>
+                <h3>Plano Alimentar Completo</h3>
+                <p>Cardápios semanais, receitas fit deliciosas e listas de compras. Emagreça comendo bem e sem passar fome!</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏠</div>
+                <h3>Treinos em Casa</h3>
+                <p>Exercícios simples que você faz na sala da sua casa, sem equipamentos caros. Apenas 20 minutos por dia!</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👥</div>
+                <h3>Comunidade VIP</h3>
+                <p>Grupo exclusivo de alunos para troca de experiências, dicas e motivação diária. Você nunca estará sozinho!</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Acompanhamento de Resultados</h3>
+                <p>Ferramentas para medir seu progresso, calcular IMC e acompanhar sua evolução semana a semana!</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎁</div>
+                <h3>Bônus Exclusivos</h3>
+                <p>E-books de receitas, guia de suplementação, aula de meditação e muito mais. Tudo incluso!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>💖 HISTÓRIAS REAIS DE TRANSFORMAÇÃO</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&face=center" alt="Maria Silva" class="testimonial-image">
+                <p class="testimonial-text">"Perdi 12kg em 30 dias! As aulas gravadas foram perfeitas para minha rotina corrida de mãe. Posso assistir quando as crianças dormem. Mudou minha vida!"</p>
+                <p class="testimonial-name">Maria Silva, 34 anos</p>
+                <p class="testimonial-result">🎉 -12kg em 30 dias</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&face=center" alt="João Santos" class="testimonial-image">
+                <p class="testimonial-text">"Sempre tive vergonha de academia. Com as aulas em casa, me senti confortável. Em 30 dias eliminei 15kg e ganhei confiança!"</p>
+                <p class="testimonial-name">João Santos, 42 anos</p>
+                <p class="testimonial-result">🎉 -15kg em 30 dias</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&face=center" alt="Ana Costa" class="testimonial-image">
+                <p class="testimonial-text">"O melhor investimento que fiz! As receitas são deliciosas e os treinos funcionam mesmo. Perdi 10kg e estou mantendo!"</p>
+                <p class="testimonial-name">Ana Costa, 28 anos</p>
+                <p class="testimonial-result">🎉 -10kg em 30 dias</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <h2>🚀 COMECE SUA TRANSFORMAÇÃO HOJE!</h2>
+        <p class="pricing-subtitle">Acesso vitalício • Aulas gravadas • Atualizações inclusas</p>
+        
+        <div class="price-card">
+            <p class="old-price">De R$ 997,00</p>
+            <p class="new-price">R$ 297,00</p>
+            <p class="price-installments">ou 12x de R$ 29,70</p>
+            
+            <ul class="price-features">
+                <li>✅ Acesso vitalício a todas as aulas gravadas</li>
+                <li>✅ Plano alimentar completo de 30 dias</li>
+                <li>✅ Treinos em casa (sem equipamentos)</li>
+                <li>✅ Comunidade VIP de alunos</li>
+                <li>✅ E-book com 100+ receitas fit</li>
+                <li>✅ Guia de suplementação</li>
+                <li>✅ Aula de meditação e mindfulness</li>
+                <li>✅ Certificado de conclusão</li>
+                <li>✅ Suporte via WhatsApp</li>
+            </ul>
+            
+            <a href="#" class="cta-button" style="width: 100%;">SIM! QUERO EMAGRECER!</a>
+            <p style="margin-top: 20px; color: #666; font-size: 0.9rem;">
+                🔒 Pagamento 100% seguro • Acesso imediato
+            </p>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee">
+        <div class="guarantee-badge">
+            7 DIAS<br>DE GARANTIA
+        </div>
+        <h3>RISCO ZERO PARA VOCÊ!</h3>
+        <p>Se em 7 dias você não estiver satisfeito(a), devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia. O risco é todo nosso!</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Transformação 30 Dias - Todos os direitos reservados</p>
+        <p>Este site não é afiliado ao Facebook ou Google</p>
+        <p style="font-size: 0.8rem; margin-top: 20px;">
+            Os resultados podem variar de pessoa para pessoa. Consulte sempre um profissional de saúde antes de iniciar qualquer programa de exercícios ou alimentação.
+        </p>
+    </footer>
+
+    <script>
+        // Transformation Slider
+        const sliderHandle = document.getElementById('sliderHandle');
+        const beforeImage = document.getElementById('beforeImage');
+        const sliderContainer = document.querySelector('.slider-container');
+        let isDragging = false;
+
+        sliderHandle.addEventListener('mousedown', () => {
+            isDragging = true;
+            document.body.style.cursor = 'ew-resize';
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDragging = false;
+            document.body.style.cursor = 'default';
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            
+            const rect = sliderContainer.getBoundingClientRect();
+            let x = e.clientX - rect.left;
+            x = Math.max(0, Math.min(x, rect.width));
+            
+            const percentage = (x / rect.width) * 100;
+            sliderHandle.style.left = percentage + '%';
+            beforeImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+        });
+
+        // Touch support for mobile
+        sliderHandle.addEventListener('touchstart', () => {
+            isDragging = true;
+        });
+
+        document.addEventListener('touchend', () => {
+            isDragging = false;
+        });
+
+        document.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            
+            const rect = sliderContainer.getBoundingClientRect();
+            const touch = e.touches[0];
+            let x = touch.clientX - rect.left;
+            x = Math.max(0, Math.min(x, rect.width));
+            
+            const percentage = (x / rect.width) * 100;
+            sliderHandle.style.left = percentage + '%';
+            beforeImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+        });
+
+        // Countdown Timer
+        function updateCountdown() {
+            const countdownElement = document.getElementById('countdown');
+            let time = countdownElement.textContent;
+            const [hours, minutes, seconds] = time.split(':').map(Number);
+            
+            let totalSeconds = hours * 3600 + minutes * 60 + seconds - 1;
+            
+            if (totalSeconds <= 0) {
+                totalSeconds = 5 * 3600; // Reset to 5 hours
+            }
+            
+            const newHours = Math.floor(totalSeconds / 3600);
+            const newMinutes = Math.floor((totalSeconds % 3600) / 60);
+            const newSeconds = totalSeconds % 60;
+            
+            countdownElement.textContent = 
+                `${String(newHours).padStart(2, '0')}:${String(newMinutes).padStart(2, '0')}:${String(newSeconds).padStart(2, '0')}`;
+        }
+
+        setInterval(updateCountdown, 1000);
+
+        // Smooth scroll for CTA buttons
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .testimonial-card, .price-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
