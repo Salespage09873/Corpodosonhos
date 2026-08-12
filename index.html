@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transformação 30 Dias - Curso de Emagrecimento</title>
+    <title>Transformação 30 Dias - Curso de Emagrecimento Online</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
@@ -12,47 +12,89 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --branco: #FFFFFF;
+            --verde-menta: #98FFD8;
+            --verde-menta-escuro: #7FE5C0;
+            --bege: #F5F1E8;
+            --azul-claro: #E8F4F8;
+            --azul-pastel: #B8E0F2;
+            --laranja: #FF8C42;
+            --laranja-escuro: #FF7020;
+            --cinza-texto: #4A5568;
+            --sombra: rgba(184, 224, 242, 0.3);
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--branco) 0%, var(--bege) 100%);
+            color: var(--cinza-texto);
             overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--branco);
+            padding: 20px 0;
+            box-shadow: 0 2px 20px var(--sombra);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--verde-menta-escuro), var(--azul-pastel));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--azul-claro) 0%, var(--verde-menta) 100%);
+            border-radius: 30px;
+            margin: 20px;
             text-align: center;
-            color: white;
-            padding: 20px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&h=1080&fit=crop') center/cover;
-            opacity: 0.2;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 48px;
             font-weight: 800;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: var(--cinza-texto);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .badge-gravadas {
+            background: var(--laranja);
+            color: var(--branco);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
             animation: pulse 2s infinite;
         }
 
@@ -61,65 +103,33 @@
             50% { transform: scale(1.05); }
         }
 
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            font-weight: 300;
+        /* Slider Antes e Depois */
+        .transformacao-section {
+            padding: 80px 0;
+            background: var(--branco);
+            margin: 40px 20px;
+            border-radius: 30px;
+            box-shadow: 0 10px 40px var(--sombra);
         }
 
-        .cta-button {
-            background: linear-gradient(45deg, #ff6b6b, #feca57);
-            color: white;
-            padding: 20px 50px;
-            font-size: 1.3rem;
-            font-weight: 700;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .cta-button:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.6);
-        }
-
-        /* Transformation Slider Section */
-        .transformation-section {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            padding: 80px 20px;
+        .transformacao-title {
             text-align: center;
-        }
-
-        .transformation-section h2 {
-            font-size: 2.5rem;
-            color: white;
-            margin-bottom: 50px;
+            font-size: 36px;
             font-weight: 700;
+            margin-bottom: 50px;
+            color: var(--cinza-texto);
         }
 
         .slider-container {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-
-        .slider-wrapper {
             position: relative;
             width: 100%;
+            max-width: 800px;
             height: 500px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            background: linear-gradient(180deg, var(--azul-claro) 0%, var(--bege) 100%);
+            box-shadow: 0 10px 30px var(--sombra);
         }
 
         .slider-image {
@@ -128,91 +138,134 @@
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            background-size: cover;
+            background-position: center;
         }
 
         .slider-before {
+            background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=500&fit=crop');
             clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+            z-index: 2;
+        }
+
+        .slider-after {
+            background-image: url('https://images.unsplash.com/photo-1574680096141-1cddd32e04ca?w=800&h=500&fit=crop');
             z-index: 1;
         }
 
         .slider-handle {
             position: absolute;
             top: 0;
-            bottom: 0;
             left: 50%;
             width: 4px;
-            background: white;
-            cursor: ew-resize;
+            height: 100%;
+            background: var(--laranja);
             z-index: 10;
+            cursor: ew-resize;
             transform: translateX(-50%);
         }
 
-        .slider-handle::before {
-            content: '◀ ▶';
+        .slider-button {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: white;
-            color: #f5576c;
-            padding: 15px 20px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.2rem;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            width: 60px;
+            height: 60px;
+            background: var(--laranja);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(255, 140, 66, 0.5);
+            z-index: 11;
+            cursor: ew-resize;
         }
 
-        .slider-labels {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 40px;
-            z-index: 5;
+        .slider-button::before {
+            content: '⟷';
+            color: var(--branco);
+            font-size: 30px;
+            font-weight: bold;
         }
 
         .slider-label {
-            background: rgba(255, 255, 255, 0.9);
-            color: #f5576c;
+            position: absolute;
+            bottom: 30px;
             padding: 10px 25px;
-            border-radius: 25px;
+            background: var(--branco);
+            border-radius: 50px;
             font-weight: 700;
-            font-size: 1.1rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            font-size: 18px;
+            box-shadow: 0 5px 15px var(--sombra);
+            z-index: 10;
+        }
+
+        .label-before {
+            left: 30px;
+            color: var(--cinza-texto);
+        }
+
+        .label-after {
+            right: 30px;
+            color: var(--laranja);
+        }
+
+        /* Personagens 2D */
+        .personagem-container {
+            position: absolute;
+            bottom: 80px;
+            width: 100%;
+            height: 300px;
+            pointer-events: none;
+        }
+
+        .personagem {
+            position: absolute;
+            bottom: 0;
+            width: 200px;
+            height: 300px;
+            transition: all 0.3s ease;
+        }
+
+        .personagem-antes {
+            left: calc(50% - 250px);
+            opacity: 1;
+            filter: brightness(1);
+        }
+
+        .personagem-depois {
+            right: calc(50% - 250px);
+            opacity: 0.3;
+            filter: brightness(0.7);
+        }
+
+        /* SVG Personagens */
+        .svg-personagem {
+            width: 100%;
+            height: 100%;
         }
 
         /* Features Section */
         .features {
-            background: white;
-            padding: 80px 20px;
-        }
-
-        .features h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 60px;
-            font-weight: 700;
+            padding: 80px 0;
+            background: var(--bege);
         }
 
         .features-grid {
-            max-width: 1200px;
-            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .feature-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--branco);
             padding: 40px;
             border-radius: 20px;
-            color: white;
             text-align: center;
+            box-shadow: 0 10px 30px var(--sombra);
             transition: transform 0.3s ease;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
         }
 
         .feature-card:hover {
@@ -220,500 +273,504 @@
         }
 
         .feature-icon {
-            font-size: 4rem;
+            font-size: 60px;
             margin-bottom: 20px;
         }
 
         .feature-card h3 {
-            font-size: 1.5rem;
+            font-size: 24px;
             margin-bottom: 15px;
-            font-weight: 600;
+            color: var(--cinza-texto);
         }
 
         .feature-card p {
-            font-size: 1rem;
+            color: #718096;
             line-height: 1.6;
-            opacity: 0.9;
         }
 
-        /* Testimonials Section */
-        .testimonials {
-            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-            padding: 80px 20px;
+        /* Aulas Gravadas Section */
+        .aulas-gravadas {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--verde-menta) 0%, var(--azul-claro) 100%);
         }
 
-        .testimonials h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 60px;
-            font-weight: 700;
+        .aulas-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
         }
 
-        .testimonials-grid {
-            max-width: 1200px;
-            margin: 0 auto;
+        .aulas-text h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .aulas-text ul {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .aulas-text li {
+            padding: 15px 0;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        .aulas-text li::before {
+            content: '✓';
+            color: var(--laranja);
+            font-weight: bold;
+            font-size: 24px;
+            margin-right: 15px;
+        }
+
+        .aulas-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px var(--sombra);
+        }
+
+        /* Depoimentos */
+        .depoimentos {
+            padding: 80px 0;
+            background: var(--branco);
+        }
+
+        .depoimentos-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            gap: 30px;
+            margin-top: 50px;
         }
 
-        .testimonial-card {
-            background: white;
-            padding: 40px;
+        .depoimento-card {
+            background: var(--azul-claro);
+            padding: 30px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
+            position: relative;
         }
 
-        .testimonial-image {
-            width: 150px;
-            height: 150px;
+        .depoimento-card::before {
+            content: '"';
+            font-size: 80px;
+            color: var(--laranja);
+            opacity: 0.3;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+
+        .depoimento-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .depoimento-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .depoimento-author img {
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 auto 20px;
-            border: 5px solid #667eea;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            color: #666;
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
-        .testimonial-name {
-            font-weight: 700;
-            color: #667eea;
-            font-size: 1.2rem;
-        }
-
-        .testimonial-result {
-            color: #f5576c;
-            font-weight: 600;
-            margin-top: 10px;
         }
 
         /* Pricing Section */
         .pricing {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 80px 20px;
-            text-align: center;
-            color: white;
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--azul-pastel) 0%, var(--verde-menta) 100%);
         }
 
-        .pricing h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .pricing-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 50px;
-            opacity: 0.9;
-        }
-
-        .price-card {
-            background: white;
+        .pricing-card {
+            background: var(--branco);
             max-width: 500px;
             margin: 0 auto;
             padding: 50px;
             border-radius: 30px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            position: relative;
-            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 20px 60px var(--sombra);
         }
 
-        .price-card::before {
-            content: 'OFERTA ESPECIAL';
-            position: absolute;
-            top: 20px;
-            right: -35px;
-            background: #ff6b6b;
-            color: white;
-            padding: 5px 40px;
-            transform: rotate(45deg);
-            font-weight: 700;
-            font-size: 0.9rem;
-        }
-
-        .old-price {
+        .pricing-old {
             text-decoration: line-through;
-            color: #999;
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+            color: #A0AEC0;
+            font-size: 24px;
         }
 
-        .new-price {
-            font-size: 4rem;
+        .pricing-current {
+            font-size: 64px;
             font-weight: 800;
-            color: #667eea;
-            margin-bottom: 10px;
+            color: var(--laranja);
+            margin: 20px 0;
         }
 
-        .price-installments {
-            font-size: 1.3rem;
-            color: #666;
+        .pricing-installments {
+            color: #718096;
             margin-bottom: 30px;
         }
 
-        .price-features {
-            list-style: none;
-            margin-bottom: 40px;
-            text-align: left;
-        }
-
-        .price-features li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            color: #333;
-        }
-
-        .price-features li:before {
-            content: '✓ ';
-            color: #667eea;
+        .btn-compra {
+            background: var(--laranja);
+            color: var(--branco);
+            border: none;
+            padding: 20px 60px;
+            font-size: 24px;
             font-weight: 700;
-            margin-right: 10px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 140, 66, 0.4);
+            width: 100%;
+            text-transform: uppercase;
         }
 
-        /* Guarantee Section */
-        .guarantee {
-            background: white;
-            padding: 60px 20px;
-            text-align: center;
+        .btn-compra:hover {
+            background: var(--laranja-escuro);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255, 140, 66, 0.6);
         }
 
-        .guarantee-badge {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 30px;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            border-radius: 50%;
+        .garantia {
+            margin-top: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 1.2rem;
-            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.3);
-        }
-
-        .guarantee h3 {
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .guarantee p {
-            color: #666;
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.8;
+            gap: 10px;
+            color: #718096;
         }
 
         /* Footer */
         footer {
-            background: #333;
-            color: white;
-            padding: 40px 20px;
+            background: var(--cinza-texto);
+            color: var(--branco);
+            padding: 40px 0;
             text-align: center;
-        }
-
-        footer p {
-            opacity: 0.7;
-            margin-bottom: 10px;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 32px;
             }
 
-            .hero p {
-                font-size: 1.2rem;
+            .aulas-content {
+                grid-template-columns: 1fr;
             }
 
-            .slider-wrapper {
+            .slider-container {
                 height: 400px;
             }
 
-            .transformation-section h2,
-            .features h2,
-            .testimonials h2,
-            .pricing h2 {
-                font-size: 2rem;
+            .personagem {
+                width: 150px;
+                height: 225px;
             }
         }
 
-        /* Urgency Banner */
-        .urgency-banner {
-            background: linear-gradient(90deg, #ff6b6b, #feca57);
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            animation: flash 2s infinite;
+        /* Animações */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
         }
 
-        @keyframes flash {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
-        }
-
-        .countdown {
-            display: inline-block;
-            margin-left: 10px;
-            background: white;
-            color: #ff6b6b;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 800;
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
-    <!-- Urgency Banner -->
-    <div class="urgency-banner">
-        ⚠️ ÚLTIMAS VAGAS COM DESCONTO DE 70%! OFERTA TERMINA EM <span class="countdown" id="countdown">04:59:59</span>
-    </div>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">🍃 Transformação 30D</div>
+                <button class="btn-compra" style="padding: 12px 30px; font-size: 16px; width: auto;">QUERO EMAGRECER</button>
+            </nav>
+        </div>
+    </header>
 
-    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>🔥 TRANSFORME SEU CORPO EM 30 DIAS! 🔥</h1>
-            <p>Curso 100% Online com Aulas Gravadas - Assista Quando e Onde Quiser!</p>
-            <p style="font-size: 1.2rem; margin-top: 20px; background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px;">
-                💪 Método Comprovado + 🥗 Plano Alimentar + 🎯 Exercícios em Casa
-            </p>
-            <a href="#pricing" class="cta-button">QUERO EMAGRECER AGORA!</a>
-            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.9;">
-                ⭐ Mais de 15.000 alunos transformados
-            </p>
+        <div class="container">
+            <div class="badge-gravadas">🎥 100% ONLINE - AULAS GRAVADAS</div>
+            <h1>Transforme Seu Corpo em 30 Dias com Aulas 100% Gravadas!</h1>
+            <p>Assista quando e onde quiser. Sem horários fixos. Sem pressão. Apenas resultados reais com um método comprovado por mais de 15.000 alunos.</p>
+            <button class="btn-compra">SIM! QUERO COMEÇAR AGORA</button>
         </div>
     </section>
 
-    <!-- Transformation Slider Section -->
-    <section class="transformation-section">
-        <h2>🎯 ARRASTE E VEJA SUA TRANSFORMAÇÃO EM 30 DIAS!</h2>
-        <div class="slider-container">
-            <div class="slider-wrapper">
-                <img src="https://images.unsplash.com/photo-1574680096141-1cddd32e04ca?w=800&h=500&fit=crop" alt="Depois - Corpo Saudável" class="slider-image">
-                <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=800&h=500&fit=crop" alt="Antes - Transformação" class="slider-image slider-before" id="beforeImage">
-                <div class="slider-handle" id="sliderHandle"></div>
-                <div class="slider-labels">
-                    <div class="slider-label">📅 HOJE</div>
-                    <div class="slider-label">🎉 DAQUI A 30 DIAS</div>
+    <section class="transformacao-section">
+        <div class="container">
+            <h2 class="transformacao-title">🔮 Veja Sua Transformação em 30 Dias</h2>
+            <p style="text-align: center; margin-bottom: 30px; font-size: 18px;">Arraste a barra para ver como você vai ficar!</p>
+            
+            <div class="slider-container" id="sliderContainer">
+                <div class="slider-image slider-before" id="sliderBefore"></div>
+                <div class="slider-image slider-after"></div>
+                
+                <div class="slider-handle" id="sliderHandle">
+                    <div class="slider-button"></div>
+                </div>
+                
+                <div class="slider-label label-before">HOJE</div>
+                <div class="slider-label label-after">DAQUI A 30 DIAS</div>
+                
+                <div class="personagem-container">
+                    <div class="personagem personagem-antes" id="personagemAntes">
+                        <svg class="svg-personagem" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Corpo antes (com barriga) -->
+                            <ellipse cx="100" cy="180" rx="70" ry="50" fill="#FFB6A6" opacity="0.8"/>
+                            <circle cx="100" cy="80" r="40" fill="#FFD5B4"/>
+                            <ellipse cx="100" cy="140" rx="50" ry="60" fill="#FFB6A6"/>
+                            <rect x="70" y="200" width="25" height="80" fill="#4A5568" rx="10"/>
+                            <rect x="105" y="200" width="25" height="80" fill="#4A5568" rx="10"/>
+                            <ellipse cx="85" cy="70" rx="8" ry="10" fill="#4A5568"/>
+                            <ellipse cx="115" cy="70" rx="8" ry="10" fill="#4A5568"/>
+                            <path d="M 85 95 Q 100 105 115 95" stroke="#4A5568" stroke-width="3" fill="none"/>
+                            <path d="M 90 115 Q 100 105 110 115" stroke="#E57373" stroke-width="2" fill="none"/>
+                            <!-- Braços caídos -->
+                            <ellipse cx="50" cy="150" rx="20" ry="40" fill="#FFB6A6" transform="rotate(20 50 150)"/>
+                            <ellipse cx="150" cy="150" rx="20" ry="40" fill="#FFB6A6" transform="rotate(-20 150 150)"/>
+                        </svg>
+                    </div>
+                    <div class="personagem personagem-depois" id="personagemDepois">
+                        <svg class="svg-personagem" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Corpo depois (magro e feliz) -->
+                            <ellipse cx="100" cy="180" rx="40" ry="30" fill="#98FFD8" opacity="0.8"/>
+                            <circle cx="100" cy="80" r="35" fill="#FFE5CC"/>
+                            <ellipse cx="100" cy="140" rx="30" ry="50" fill="#98FFD8"/>
+                            <rect x="75" y="190" width="20" height="90" fill="#4A5568" rx="8"/>
+                            <rect x="105" y="190" width="20" height="90" fill="#4A5568" rx="8"/>
+                            <ellipse cx="85" cy="70" rx="7" ry="9" fill="#4A5568"/>
+                            <ellipse cx="115" cy="70" rx="7" ry="9" fill="#4A5568"/>
+                            <path d="M 80 95 Q 100 115 120 95" stroke="#4A5568" stroke-width="3" fill="none"/>
+                            <!-- Sorriso grande -->
+                            <path d="M 85 105 Q 100 125 115 105" stroke="#4CAF50" stroke-width="3" fill="none"/>
+                            <!-- Braços levantados (feliz) -->
+                            <ellipse cx="50" cy="120" rx="18" ry="35" fill="#98FFD8" transform="rotate(-45 50 120)"/>
+                            <ellipse cx="150" cy="120" rx="18" ry="35" fill="#98FFD8" transform="rotate(45 150 120)"/>
+                            <!-- Olhos brilhantes -->
+                            <circle cx="85" cy="68" r="3" fill="#FFF"/>
+                            <circle cx="115" cy="68" r="3" fill="#FFF"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
-        <p style="color: white; margin-top: 30px; font-size: 1.2rem; font-weight: 600;">
-            Essa pode ser a SUA história! Comece agora! 💪
-        </p>
     </section>
 
-    <!-- Features Section -->
     <section class="features">
-        <h2>🌟 POR QUE NOSSO CURSO É DIFERENTE?</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">📹</div>
-                <h3>Aulas 100% Gravadas</h3>
-                <p>Assista no seu ritmo, quando e onde quiser! Sem horários fixos, sem pressão. Acesso vitalício a todas as aulas!</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🥗</div>
-                <h3>Plano Alimentar Completo</h3>
-                <p>Cardápios semanais, receitas fit deliciosas e listas de compras. Emagreça comendo bem e sem passar fome!</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🏠</div>
-                <h3>Treinos em Casa</h3>
-                <p>Exercícios simples que você faz na sala da sua casa, sem equipamentos caros. Apenas 20 minutos por dia!</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">👥</div>
-                <h3>Comunidade VIP</h3>
-                <p>Grupo exclusivo de alunos para troca de experiências, dicas e motivação diária. Você nunca estará sozinho!</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">📊</div>
-                <h3>Acompanhamento de Resultados</h3>
-                <p>Ferramentas para medir seu progresso, calcular IMC e acompanhar sua evolução semana a semana!</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🎁</div>
-                <h3>Bônus Exclusivos</h3>
-                <p>E-books de receitas, guia de suplementação, aula de meditação e muito mais. Tudo incluso!</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <h2>💖 HISTÓRIAS REAIS DE TRANSFORMAÇÃO</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&face=center" alt="Maria Silva" class="testimonial-image">
-                <p class="testimonial-text">"Perdi 12kg em 30 dias! As aulas gravadas foram perfeitas para minha rotina corrida de mãe. Posso assistir quando as crianças dormem. Mudou minha vida!"</p>
-                <p class="testimonial-name">Maria Silva, 34 anos</p>
-                <p class="testimonial-result">🎉 -12kg em 30 dias</p>
-            </div>
-            <div class="testimonial-card">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&face=center" alt="João Santos" class="testimonial-image">
-                <p class="testimonial-text">"Sempre tive vergonha de academia. Com as aulas em casa, me senti confortável. Em 30 dias eliminei 15kg e ganhei confiança!"</p>
-                <p class="testimonial-name">João Santos, 42 anos</p>
-                <p class="testimonial-result">🎉 -15kg em 30 dias</p>
-            </div>
-            <div class="testimonial-card">
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&face=center" alt="Ana Costa" class="testimonial-image">
-                <p class="testimonial-text">"O melhor investimento que fiz! As receitas são deliciosas e os treinos funcionam mesmo. Perdi 10kg e estou mantendo!"</p>
-                <p class="testimonial-name">Ana Costa, 28 anos</p>
-                <p class="testimonial-result">🎉 -10kg em 30 dias</p>
+        <div class="container">
+            <h2 style="text-align: center; font-size: 36px; margin-bottom: 20px;">Por Que Este Curso é Diferente?</h2>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🎥</div>
+                    <h3>Aulas 100% Gravadas</h3>
+                    <p>Assista no seu tempo, quantas vezes quiser. Sem horários fixos, sem pressão. Você no controle total do seu aprendizado.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Acesso Imediato</h3>
+                    <p>Comprou, começou! Receba acesso instantâneo a todas as aulas gravadas e comece sua transformação hoje mesmo.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📱</div>
+                    <h3>Multi-Plataforma</h3>
+                    <p>Assista no celular, tablet ou computador. Suas aulas gravadas disponíveis 24/7 em qualquer dispositivo.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Reveja Quantas Vezes Quiser</h3>
+                    <p>Não entendeu algo? Volte e assista novamente. As aulas gravadas são suas para sempre!</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🏠</div>
+                    <h3>Treine em Casa</h3>
+                    <p>Sem academia, sem equipamentos caros. Exercícios que você pode fazer no conforto da sua casa, seguindo as aulas gravadas.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📊</div>
+                    <h3>Resultados Comprovados</h3>
+                    <p>Mais de 15.000 alunos transformados com nosso método de aulas gravadas. Sua vez chegou!</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
-        <h2>🚀 COMECE SUA TRANSFORMAÇÃO HOJE!</h2>
-        <p class="pricing-subtitle">Acesso vitalício • Aulas gravadas • Atualizações inclusas</p>
-        
-        <div class="price-card">
-            <p class="old-price">De R$ 997,00</p>
-            <p class="new-price">R$ 297,00</p>
-            <p class="price-installments">ou 12x de R$ 29,70</p>
-            
-            <ul class="price-features">
-                <li>✅ Acesso vitalício a todas as aulas gravadas</li>
-                <li>✅ Plano alimentar completo de 30 dias</li>
-                <li>✅ Treinos em casa (sem equipamentos)</li>
-                <li>✅ Comunidade VIP de alunos</li>
-                <li>✅ E-book com 100+ receitas fit</li>
-                <li>✅ Guia de suplementação</li>
-                <li>✅ Aula de meditação e mindfulness</li>
-                <li>✅ Certificado de conclusão</li>
-                <li>✅ Suporte via WhatsApp</li>
-            </ul>
-            
-            <a href="#" class="cta-button" style="width: 100%;">SIM! QUERO EMAGRECER!</a>
-            <p style="margin-top: 20px; color: #666; font-size: 0.9rem;">
-                🔒 Pagamento 100% seguro • Acesso imediato
-            </p>
+    <section class="aulas-gravadas">
+        <div class="container">
+            <div class="aulas-content">
+                <div class="aulas-text">
+                    <h2>🎯 Aulas Gravadas: Sua Liberdade para Emagrecer</h2>
+                    <p style="font-size: 18px; line-height: 1.8;">Esqueça horarios fixos e compromissos impossíveis. Com nossas <strong>aulas 100% gravadas</strong>, você tem total liberdade para assistir quando e onde quiser.</p>
+                    <ul>
+                        <li><strong>Aulas em HD</strong> - Qualidade cinematográfica para você não perder nenhum detalhe</li>
+                        <li><strong>Acesso Vitalício</strong> - As aulas gravadas são suas para sempre</li>
+                        <li><strong>Atualizações Gratuitas</strong> - Novo conteúdo gravado regularmente</li>
+                        <li><strong>Download Disponível</strong> - Baixe e assista offline quando quiser</li>
+                        <li><strong>Ritmo Personalizado</strong> - Pause, volte e avance no seu próprio ritmo</li>
+                    </ul>
+                </div>
+                <div class="aulas-image">
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=400&fit=crop" alt="Pessoa assistindo aula gravada">
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Guarantee Section -->
-    <section class="guarantee">
-        <div class="guarantee-badge">
-            7 DIAS<br>DE GARANTIA
+    <section class="depoimentos">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 36px; margin-bottom: 20px;">Histórias Reais de Transformação</h2>
+            <div class="depoimentos-grid">
+                <div class="depoimento-card fade-in">
+                    <p class="depoimento-text">"Perdi 12kg em 30 dias! O melhor é que eu assistia as aulas gravadas quando chegava do trabalho. Sem pressão de horario!"</p>
+                    <div class="depoimento-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Maria Silva">
+                        <div>
+                            <strong>Maria Silva</strong>
+                            <p style="font-size: 14px;">-12kg em 30 dias</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card fade-in">
+                    <p class="depoimento-text">"Como mãe de dois filhos, não tinha tempo para academias. As aulas gravadas foram minha salvação! Perdi 8kg assistindo em casa."</p>
+                    <div class="depoimento-author">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Ana Costa">
+                        <div>
+                            <strong>Ana Costa</strong>
+                            <p style="font-size: 14px;">-8kg em 30 dias</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="depoimento-card fade-in">
+                    <p class="depoimento-text">"Trabalho em turnos e nunca conseguia seguir um curso normal. Com as aulas gravadas, eu assistia quando podia. Resultado: 15kg a menos!"</p>
+                    <div class="depoimento-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Carlos Oliveira">
+                        <div>
+                            <strong>Carlos Oliveira</strong>
+                            <p style="font-size: 14px;">-15kg em 30 dias</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h3>RISCO ZERO PARA VOCÊ!</h3>
-        <p>Se em 7 dias você não estiver satisfeito(a), devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia. O risco é todo nosso!</p>
     </section>
 
-    <!-- Footer -->
+    <section class="pricing">
+        <div class="container">
+            <div class="pricing-card">
+                <h2 style="font-size: 32px; margin-bottom: 20px;">Comece Sua Transformação Hoje!</h2>
+                <p style="color: #718096; margin-bottom: 20px;">Acesso completo a todas as aulas gravadas</p>
+                <div class="pricing-old">De R$ 497,90</div>
+                <div class="pricing-current">R$ 147,90</div>
+                <p class="pricing-installments">ou 12x de R$ 14,90</p>
+                <button class="btn-compra">QUERO EMAGRECER AGORA!</button>
+                <div class="garantia">
+                    <span style="font-size: 30px;">🛡️</span>
+                    <span>Garantia de 7 dias ou seu dinheiro de volta</span>
+                </div>
+                <p style="margin-top: 20px; color: #A0AEC0; font-size: 14px;">+15.000 alunos transformados com aulas gravadas</p>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>© 2024 Transformação 30 Dias - Todos os direitos reservados</p>
-        <p>Este site não é afiliado ao Facebook ou Google</p>
-        <p style="font-size: 0.8rem; margin-top: 20px;">
-            Os resultados podem variar de pessoa para pessoa. Consulte sempre um profissional de saúde antes de iniciar qualquer programa de exercícios ou alimentação.
-        </p>
+        <div class="container">
+            <p>&copy; 2024 Transformação 30D - Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 14px; color: #A0AEC0;">Curso 100% online com aulas gravadas</p>
+        </div>
     </footer>
 
     <script>
-        // Transformation Slider
+        // Slider Antes e Depois Funcional
+        const sliderContainer = document.getElementById('sliderContainer');
+        const sliderBefore = document.getElementById('sliderBefore');
         const sliderHandle = document.getElementById('sliderHandle');
-        const beforeImage = document.getElementById('beforeImage');
-        const sliderContainer = document.querySelector('.slider-container');
+        const personagemAntes = document.getElementById('personagemAntes');
+        const personagemDepois = document.getElementById('personagemDepois');
+
         let isDragging = false;
 
-        sliderHandle.addEventListener('mousedown', () => {
+        function updateSlider(position) {
+            const containerWidth = sliderContainer.offsetWidth;
+            let percentage = (position / containerWidth) * 100;
+            
+            // Limitar entre 10% e 90%
+            percentage = Math.max(10, Math.min(90, percentage));
+            
+            sliderBefore.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+            sliderHandle.style.left = `${percentage}%`;
+            
+            // Atualizar personagens
+            const beforeOpacity = 1 - (percentage - 10) / 80;
+            const afterOpacity = (percentage - 10) / 80;
+            
+            personagemAntes.style.opacity = beforeOpacity;
+            personagemAntes.style.filter = `brightness(${0.7 + (beforeOpacity * 0.3)})`;
+            
+            personagemDepois.style.opacity = afterOpacity;
+            personagemDepois.style.filter = `brightness(${0.7 + (afterOpacity * 0.3)})`;
+            
+            // Mover personagens
+            const beforeLeft = 50 - 250 - ((percentage - 50) * 2);
+            const afterRight = 50 - 250 + ((percentage - 50) * 2);
+            
+            personagemAntes.style.left = `calc(50% + ${beforeLeft}px)`;
+            personagemDepois.style.right = `calc(50% - ${afterRight}px)`;
+        }
+
+        // Eventos de Mouse
+        sliderHandle.addEventListener('mousedown', (e) => {
             isDragging = true;
-            document.body.style.cursor = 'ew-resize';
+            sliderHandle.style.transform = 'translateX(-50%) scale(1.1)';
         });
 
         document.addEventListener('mouseup', () => {
             isDragging = false;
-            document.body.style.cursor = 'default';
+            sliderHandle.style.transform = 'translateX(-50%) scale(1)';
         });
 
         document.addEventListener('mousemove', (e) => {
             if (!isDragging) return;
-            
+            e.preventDefault();
             const rect = sliderContainer.getBoundingClientRect();
-            let x = e.clientX - rect.left;
-            x = Math.max(0, Math.min(x, rect.width));
-            
-            const percentage = (x / rect.width) * 100;
-            sliderHandle.style.left = percentage + '%';
-            beforeImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+            const position = e.clientX - rect.left;
+            updateSlider(position);
         });
 
-        // Touch support for mobile
-        sliderHandle.addEventListener('touchstart', () => {
+        // Eventos de Touch
+        sliderHandle.addEventListener('touchstart', (e) => {
             isDragging = true;
+            sliderHandle.style.transform = 'translateX(-50%) scale(1.1)';
         });
 
         document.addEventListener('touchend', () => {
             isDragging = false;
+            sliderHandle.style.transform = 'translateX(-50%) scale(1)';
         });
 
         document.addEventListener('touchmove', (e) => {
             if (!isDragging) return;
-            
             const rect = sliderContainer.getBoundingClientRect();
-            const touch = e.touches[0];
-            let x = touch.clientX - rect.left;
-            x = Math.max(0, Math.min(x, rect.width));
-            
-            const percentage = (x / rect.width) * 100;
-            sliderHandle.style.left = percentage + '%';
-            beforeImage.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+            const position = e.touches[0].clientX - rect.left;
+            updateSlider(position);
         });
 
-        // Countdown Timer
-        function updateCountdown() {
-            const countdownElement = document.getElementById('countdown');
-            let time = countdownElement.textContent;
-            const [hours, minutes, seconds] = time.split(':').map(Number);
-            
-            let totalSeconds = hours * 3600 + minutes * 60 + seconds - 1;
-            
-            if (totalSeconds <= 0) {
-                totalSeconds = 5 * 3600; // Reset to 5 hours
-            }
-            
-            const newHours = Math.floor(totalSeconds / 3600);
-            const newMinutes = Math.floor((totalSeconds % 3600) / 60);
-            const newSeconds = totalSeconds % 60;
-            
-            countdownElement.textContent = 
-                `${String(newHours).padStart(2, '0')}:${String(newMinutes).padStart(2, '0')}:${String(newSeconds).padStart(2, '0')}`;
-        }
-
-        setInterval(updateCountdown, 1000);
-
-        // Smooth scroll for CTA buttons
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
+        // Clique direto no container
+        sliderContainer.addEventListener('click', (e) => {
+            const rect = sliderContainer.getBoundingClientRect();
+            const position = e.clientX - rect.left;
+            updateSlider(position);
         });
 
-        // Add animation on scroll
+        // Animação de fade-in ao scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -722,17 +779,22 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('visible');
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.feature-card, .testimonial-card, .price-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s ease';
+        document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
+        });
+
+        // Smooth scroll para botões de compra
+        document.querySelectorAll('.btn-compra').forEach(button => {
+            button.addEventListener('click', () => {
+                document.querySelector('.pricing').scrollIntoView({ 
+                    behavior: 'smooth' 
+                });
+            });
         });
     </script>
 </body>
