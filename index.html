@@ -3,798 +3,602 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transformação 30 Dias - Curso de Emagrecimento Online</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <title>Corpo dos Sonhos - Transformação Real</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-card: #141414;
+            --bg-lighter: #1f1f1f;
+            --mint: #98FFD8;
+            --mint-dim: rgba(152, 255, 216, 0.1);
+            --blue-pastel: #B8E0F2;
+            --orange-btn: #FF8C42;
+            --orange-hover: #ff6b1a;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --gradient-dark: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        :root {
-            --branco: #FFFFFF;
-            --verde-menta: #98FFD8;
-            --verde-menta-escuro: #7FE5C0;
-            --bege: #F5F1E8;
-            --azul-claro: #E8F4F8;
-            --azul-pastel: #B8E0F2;
-            --laranja: #FF8C42;
-            --laranja-escuro: #FF7020;
-            --cinza-texto: #4A5568;
-            --sombra: rgba(184, 224, 242, 0.3);
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, var(--branco) 0%, var(--bege) 100%);
-            color: var(--cinza-texto);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
             overflow-x: hidden;
+            line-height: 1.6;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Header */
-        header {
-            background: var(--branco);
-            padding: 20px 0;
-            box-shadow: 0 2px 20px var(--sombra);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        .highlight {
+            color: var(--mint);
+            font-weight: 700;
         }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .text-orange {
+            color: var(--orange-btn);
         }
 
-        .logo {
-            font-size: 28px;
+        h1, h2, h3 {
+            line-height: 1.2;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: var(--orange-btn);
+            color: #fff;
+            padding: 18px 40px;
+            font-size: 1.2rem;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--verde-menta-escuro), var(--azul-pastel));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 80px 0;
-            background: linear-gradient(135deg, var(--azul-claro) 0%, var(--verde-menta) 100%);
-            border-radius: 30px;
-            margin: 20px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 0 20px rgba(255, 140, 66, 0.4);
+            transition: all 0.3s ease;
             text-align: center;
+            border: 2px solid var(--orange-btn);
+            width: 100%;
+            max-width: 500px;
+            animation: pulse 2s infinite;
         }
 
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 800;
+        .btn-cta:hover {
+            background: var(--orange-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px rgba(255, 140, 66, 0.6);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 140, 66, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 140, 66, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 140, 66, 0); }
+        }
+
+        header {
+            background: var(--gradient-dark);
+            padding: 80px 0 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .badge-online {
+            background: rgba(152, 255, 216, 0.1);
+            color: var(--mint);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
             margin-bottom: 20px;
-            color: var(--cinza-texto);
+            border: 1px solid var(--mint);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .hero p {
-            font-size: 20px;
+        .hero-title {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
             margin-bottom: 30px;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .badge-gravadas {
-            background: var(--laranja);
-            color: var(--branco);
-            padding: 10px 25px;
-            border-radius: 50px;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        /* Slider Antes e Depois */
-        .transformacao-section {
-            padding: 80px 0;
-            background: var(--branco);
-            margin: 40px 20px;
-            border-radius: 30px;
-            box-shadow: 0 10px 40px var(--sombra);
-        }
-
-        .transformacao-title {
-            text-align: center;
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 50px;
-            color: var(--cinza-texto);
+        .slider-section {
+            padding: 40px 0;
+            background: var(--bg-card);
+            margin: 40px 0;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
         }
 
         .slider-container {
             position: relative;
             width: 100%;
-            max-width: 800px;
-            height: 500px;
+            max-width: 600px;
+            height: 400px;
             margin: 0 auto;
             border-radius: 20px;
             overflow: hidden;
-            background: linear-gradient(180deg, var(--azul-claro) 0%, var(--bege) 100%);
-            box-shadow: 0 10px 30px var(--sombra);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: #222;
         }
 
-        .slider-image {
+        .slide-image {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .slider-before {
-            background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=500&fit=crop');
-            clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-            z-index: 2;
-        }
-
-        .slider-after {
-            background-image: url('https://images.unsplash.com/photo-1574680096141-1cddd32e04ca?w=800&h=500&fit=crop');
-            z-index: 1;
-        }
-
-        .slider-handle {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 4px;
-            height: 100%;
-            background: var(--laranja);
-            z-index: 10;
-            cursor: ew-resize;
-            transform: translateX(-50%);
-        }
-
-        .slider-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60px;
-            height: 60px;
-            background: var(--laranja);
-            border-radius: 50%;
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
-            box-shadow: 0 5px 20px rgba(255, 140, 66, 0.5);
-            z-index: 11;
-            cursor: ew-resize;
+            align-items: center;
+            background: radial-gradient(circle at center, #2a2a2a 0%, #111 100%);
         }
 
-        .slider-button::before {
-            content: '⟷';
-            color: var(--branco);
-            font-size: 30px;
-            font-weight: bold;
-        }
-
-        .slider-label {
+        .slide-label {
             position: absolute;
-            bottom: 30px;
-            padding: 10px 25px;
-            background: var(--branco);
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 18px;
-            box-shadow: 0 5px 15px var(--sombra);
-            z-index: 10;
-        }
-
-        .label-before {
-            left: 30px;
-            color: var(--cinza-texto);
-        }
-
-        .label-after {
-            right: 30px;
-            color: var(--laranja);
-        }
-
-        /* Personagens 2D */
-        .personagem-container {
-            position: absolute;
-            bottom: 80px;
-            width: 100%;
-            height: 300px;
-            pointer-events: none;
-        }
-
-        .personagem {
-            position: absolute;
-            bottom: 0;
-            width: 200px;
-            height: 300px;
-            transition: all 0.3s ease;
-        }
-
-        .personagem-antes {
-            left: calc(50% - 250px);
-            opacity: 1;
-            filter: brightness(1);
-        }
-
-        .personagem-depois {
-            right: calc(50% - 250px);
-            opacity: 0.3;
-            filter: brightness(0.7);
-        }
-
-        /* SVG Personagens */
-        .svg-personagem {
-            width: 100%;
-            height: 100%;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 80px 0;
-            background: var(--bege);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .feature-card {
-            background: var(--branco);
-            padding: 40px;
+            top: 20px;
+            background: rgba(0,0,0,0.7);
+            padding: 5px 15px;
             border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px var(--sombra);
+            font-weight: bold;
+            z-index: 10;
+            backdrop-filter: blur(5px);
+        }
+
+        .label-before { left: 20px; color: #ff6b6b; border: 1px solid #ff6b6b; }
+        .label-after { right: 20px; color: var(--mint); border: 1px solid var(--mint); opacity: 0; transition: opacity 0.3s; }
+
+        .character-svg {
+            height: 80%;
+            width: auto;
             transition: transform 0.3s ease;
         }
 
-        .feature-card:hover {
-            transform: translateY(-10px);
+        .before-char {
+            filter: drop-shadow(0 0 10px rgba(255, 107, 107, 0.3));
         }
 
-        .feature-icon {
-            font-size: 60px;
-            margin-bottom: 20px;
+        .after-char {
+            filter: drop-shadow(0 0 15px rgba(152, 255, 216, 0.4));
+            transform: scale(1.05);
         }
 
-        .feature-card h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: var(--cinza-texto);
+        .slider-control {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            z-index: 20;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.2);
         }
 
-        .feature-card p {
-            color: #718096;
-            line-height: 1.6;
+        input[type="range"] {
+            width: 100%;
+            -webkit-appearance: none;
+            background: transparent;
         }
 
-        /* Aulas Gravadas Section */
-        .aulas-gravadas {
-            padding: 80px 0;
-            background: linear-gradient(135deg, var(--verde-menta) 0%, var(--azul-claro) 100%);
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            background: var(--orange-btn);
+            cursor: pointer;
+            margin-top: -10px;
+            box-shadow: 0 0 10px var(--orange-btn);
         }
 
-        .aulas-content {
+        input[type="range"]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 5px;
+            cursor: pointer;
+            background: #555;
+            border-radius: 5px;
+        }
+
+        .slider-text {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .pain-section {
+            padding: 60px 0;
+            background: var(--bg-dark);
+        }
+
+        .pain-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
         }
 
-        .aulas-text h2 {
-            font-size: 40px;
-            margin-bottom: 20px;
+        .pain-card {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #ff4757;
+            transition: transform 0.3s;
         }
 
-        .aulas-text ul {
-            list-style: none;
+        .pain-card:hover {
+            transform: translateY(-5px);
+            background: var(--bg-lighter);
+        }
+
+        .pain-card h3 {
+            color: #ff4757;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .solution-section {
+            padding: 60px 0;
+            background: var(--bg-card);
+            border-top: 1px solid #333;
+        }
+
+        .method-box {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid #333;
+            margin-bottom: 40px;
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
             margin-top: 30px;
         }
 
-        .aulas-text li {
-            padding: 15px 0;
-            font-size: 18px;
+        .module-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 0.9rem;
             display: flex;
             align-items: center;
+            border: 1px solid transparent;
+            transition: all 0.3s;
         }
 
-        .aulas-text li::before {
-            content: '✓';
-            color: var(--laranja);
+        .module-item:hover {
+            border-color: var(--mint);
+            background: rgba(152, 255, 216, 0.05);
+        }
+
+        .module-icon {
+            color: var(--mint);
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .bonus-tag {
+            background: var(--orange-btn);
+            color: #fff;
+            font-size: 0.7rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: auto;
             font-weight: bold;
-            font-size: 24px;
-            margin-right: 15px;
         }
 
-        .aulas-image img {
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px var(--sombra);
-        }
-
-        /* Depoimentos */
-        .depoimentos {
+        .offer-section {
             padding: 80px 0;
-            background: var(--branco);
-        }
-
-        .depoimentos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .depoimento-card {
-            background: var(--azul-claro);
-            padding: 30px;
-            border-radius: 20px;
-            position: relative;
-        }
-
-        .depoimento-card::before {
-            content: '"';
-            font-size: 80px;
-            color: var(--laranja);
-            opacity: 0.3;
-            position: absolute;
-            top: 10px;
-            left: 20px;
-        }
-
-        .depoimento-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .depoimento-author {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .depoimento-author img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        /* Pricing Section */
-        .pricing {
-            padding: 80px 0;
-            background: linear-gradient(135deg, var(--azul-pastel) 0%, var(--verde-menta) 100%);
-        }
-
-        .pricing-card {
-            background: var(--branco);
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 50px;
-            border-radius: 30px;
+            background: radial-gradient(circle at center, #2a1a1a 0%, #0a0a0a 100%);
             text-align: center;
-            box-shadow: 0 20px 60px var(--sombra);
         }
 
-        .pricing-old {
+        .price-card {
+            background: #111;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 20px;
+            border: 2px solid var(--orange-btn);
+            box-shadow: 0 0 40px rgba(255, 140, 66, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .old-price {
             text-decoration: line-through;
-            color: #A0AEC0;
-            font-size: 24px;
+            color: var(--text-muted);
+            font-size: 1.2rem;
         }
 
-        .pricing-current {
-            font-size: 64px;
-            font-weight: 800;
-            color: var(--laranja);
-            margin: 20px 0;
+        .new-price {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--mint);
+            margin: 10px 0;
+            text-shadow: 0 0 20px rgba(152, 255, 216, 0.3);
         }
 
-        .pricing-installments {
-            color: #718096;
+        .installments {
+            font-size: 1.5rem;
+            color: #fff;
             margin-bottom: 30px;
         }
 
-        .btn-compra {
-            background: var(--laranja);
-            color: var(--branco);
-            border: none;
-            padding: 20px 60px;
-            font-size: 24px;
-            font-weight: 700;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(255, 140, 66, 0.4);
-            width: 100%;
-            text-transform: uppercase;
+        .guarantee-badge {
+            width: 100px;
+            margin: 20px auto;
+            filter: invert(1);
         }
 
-        .btn-compra:hover {
-            background: var(--laranja-escuro);
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(255, 140, 66, 0.6);
-        }
-
-        .garantia {
-            margin-top: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            color: #718096;
-        }
-
-        /* Footer */
         footer {
-            background: var(--cinza-texto);
-            color: var(--branco);
+            background: #000;
             padding: 40px 0;
             text-align: center;
+            color: #555;
+            font-size: 0.8rem;
+            border-top: 1px solid #222;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .aulas-content {
-                grid-template-columns: 1fr;
-            }
-
-            .slider-container {
-                height: 400px;
-            }
-
-            .personagem {
-                width: 150px;
-                height: 225px;
-            }
-        }
-
-        /* Animações */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+            .hero-title { font-size: 1.8rem; }
+            .slider-container { height: 300px; }
+            .new-price { font-size: 2.5rem; }
         }
     </style>
 </head>
 <body>
+
     <header>
         <div class="container">
-            <nav>
-                <div class="logo">🍃 Transformação 30D</div>
-                <button class="btn-compra" style="padding: 12px 30px; font-size: 16px; width: auto;">QUERO EMAGRECER</button>
-            </nav>
+            <span class="badge-online">🔒 100% Online • Aulas Gravadas • Acesso Vitalício</span>
+            <h1 class="hero-title">Você olha no espelho e já não reconhece mais a mulher que vê?</h1>
+            <p class="hero-subtitle">Elimine até 10 kg em apenas 20 dias, recupere sua autoestima e volte a se sentir desejada — <span class="highlight">sem dietas malucas e sem passar horas na academia.</span></p>
+            
+            <div style="background: #000; width: 100%; max-width: 700px; height: 400px; margin: 30px auto; border-radius: 15px; display: flex; align-items: center; justify-content: center; border: 1px solid #333; box-shadow: 0 0 30px rgba(0,0,0,0.8);">
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; color: var(--orange-btn);">▶️</div>
+                    <p style="color: #fff; margin-top: 10px;">ASSISTA AO VÍDEO DE APRESENTAÇÃO</p>
+                </div>
+            </div>
+
+            <a href="#offer" class="btn-cta">QUERO TRANSFORMAR MEU CORPO E MINHA VIDA AGORA!</a>
         </div>
     </header>
 
-    <section class="hero">
+    <section class="slider-section">
         <div class="container">
-            <div class="badge-gravadas">🎥 100% ONLINE - AULAS GRAVADAS</div>
-            <h1>Transforme Seu Corpo em 30 Dias com Aulas 100% Gravadas!</h1>
-            <p>Assista quando e onde quiser. Sem horários fixos. Sem pressão. Apenas resultados reais com um método comprovado por mais de 15.000 alunos.</p>
-            <button class="btn-compra">SIM! QUERO COMEÇAR AGORA</button>
-        </div>
-    </section>
-
-    <section class="transformacao-section">
-        <div class="container">
-            <h2 class="transformacao-title">🔮 Veja Sua Transformação em 30 Dias</h2>
-            <p style="text-align: center; margin-bottom: 30px; font-size: 18px;">Arraste a barra para ver como você vai ficar!</p>
+            <h2 style="text-align: center; margin-bottom: 30px; color: var(--mint);">ARRASTE E VEJA SUA TRANSFORMAÇÃO EM 30 DIAS</h2>
             
-            <div class="slider-container" id="sliderContainer">
-                <div class="slider-image slider-before" id="sliderBefore"></div>
-                <div class="slider-image slider-after"></div>
+            <div class="slider-container">
+                <div class="slide-image" id="before-slide">
+                    <span class="slide-label label-before">HOJE</span>
+                    <svg class="character-svg before-char" viewBox="0 0 200 400" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="100" cy="220" rx="70" ry="90" fill="#ffccbc" />
+                        <circle cx="100" cy="100" r="45" fill="#ffccbc" />
+                        <circle cx="85" cy="90" r="5" fill="#333" />
+                        <circle cx="115" cy="90" r="5" fill="#333" />
+                        <path d="M 80 120 Q 100 110 120 120" stroke="#333" stroke-width="3" fill="none" />
+                        <path d="M 40 200 Q 10 250 20 300" stroke="#ffccbc" stroke-width="25" fill="none" stroke-linecap="round" />
+                        <path d="M 160 200 Q 190 250 180 300" stroke="#ffccbc" stroke-width="25" fill="none" stroke-linecap="round" />
+                        <rect x="70" y="300" width="25" height="80" fill="#333" rx="10" />
+                        <rect x="105" y="300" width="25" height="80" fill="#333" rx="10" />
+                        <path d="M 40 180 Q 100 160 160 180 L 160 250 Q 100 280 40 250 Z" fill="#ff6b6b" opacity="0.8" />
+                    </svg>
+                </div>
+
+                <div class="slide-image" id="after-slide" style="clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);">
+                    <span class="slide-label label-after" id="after-label">DAQUI A 30 DIAS</span>
+                    <svg class="character-svg after-char" viewBox="0 0 200 400" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="100" cy="220" rx="40" ry="70" fill="#ffe0bd" />
+                        <circle cx="100" cy="100" r="40" fill="#ffe0bd" />
+                        <circle cx="85" cy="90" r="4" fill="#333" />
+                        <circle cx="115" cy="90" r="4" fill="#333" />
+                        <path d="M 80 115 Q 100 135 120 115" stroke="#333" stroke-width="3" fill="none" />
+                        <path d="M 140 80 L 145 70 L 150 80 L 160 80 L 150 90 L 150 100 L 140 90 L 130 90 L 140 80" fill="#fff" />
+                        <path d="M 45 180 Q 10 120 30 100" stroke="#ffe0bd" stroke-width="20" fill="none" stroke-linecap="round" />
+                        <path d="M 155 180 Q 190 120 170 100" stroke="#ffe0bd" stroke-width="20" fill="none" stroke-linecap="round" />
+                        <rect x="80" y="280" width="20" height="90" fill="#333" rx="10" />
+                        <rect x="100" y="280" width="20" height="90" fill="#333" rx="10" />
+                        <path d="M 65 170 Q 100 150 135 170 L 135 240 Q 100 260 65 240 Z" fill="#98FFD8" />
+                    </svg>
+                </div>
+
+                <div class="slider-control">
+                    <input type="range" min="0" max="100" value="0" id="transform-slider">
+                </div>
+            </div>
+            <p class="slider-text">Arraste a barra para ver seu futuro eu</p>
+        </div>
+    </section>
+
+    <section class="pain-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 20px;">Se você chegou até aqui, é porque lá no fundo você <span class="text-orange">CANSOU</span>...</h2>
+            <p style="text-align: center; color: var(--text-muted); max-width: 700px; margin: 0 auto 40px;">
+                Cansou de tentar de tudo. Cansou de ver o tempo passar e continuar presa em um corpo que não parece seu.
+                A verdade é dura: a falta de peso ideal não está tirando apenas a sua saúde, está tirando a sua vida de você.
+            </p>
+
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <h3>❤️ Vida Íntima Esfriou?</h3>
+                    <p>Você evita o contato, apaga a luz na hora de se trocar ou sente vergonha até de colocar uma lingerie porque odeia o que vê no espelho?</p>
+                </div>
+                <div class="pain-card">
+                    <h3>☀️ O Verão virou Pesadelo?</h3>
+                    <p>A simples ideia de colocar um biquíni e ir à praia te dá ansiedade só de pensar no julgamento dos outros?</p>
+                </div>
+                <div class="pain-card">
+                    <h3>😞 Culpa Diária?</h3>
+                    <p>Você cuida de todos, mas quando olha para si mesma, sente que sobrou apenas o cansaço e a frustração?</p>
+                </div>
+                <div class="pain-card">
+                    <h3>🔒 Corpo "Travado"?</h3>
+                    <p>Vive inchada, intestino preso, ansiosa, descontando o estresse na comida, vendo seu cabelo cair e energia sumir?</p>
+                </div>
+                <div class="pain-card">
+                    <h3>👖 Roupas Não Servem?</h3>
+                    <p>Aquele jeans favorito continua guardado no fundo do armário há anos, enquanto você só usa roupas largas?</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px; background: rgba(255,255,255,0.05); padding: 30px; border-radius: 15px;">
+                <h3 style="color: var(--mint); font-size: 1.5rem; margin-bottom: 15px;">A CULPA NÃO É SUA!</h3>
+                <p>O mercado tradicional te vendeu a mentira de que para emagrecer você precisa passar fome ou morar na academia. Eles te deram fórmulas prontas que não cabem na rotina real de uma mulher que tem filhos, casa e mil responsabilidades.</p>
+                <br>
+                <p><strong>O Método Corpo dos Sonhos foi feito para a SUA realidade.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="solution-section">
+        <div class="container">
+            <div class="method-box">
+                <h2 style="color: var(--mint); text-align: center; margin-bottom: 20px;">O Que Você Vai Encontrar no Corpo dos Sonhos</h2>
+                <p style="text-align: center; margin-bottom: 30px;">Um programa definitivo focado em destravar seu metabolismo e regular seu intestino através da alimentação inteligente.</p>
                 
-                <div class="slider-handle" id="sliderHandle">
-                    <div class="slider-button"></div>
+                <div class="modules-grid">
+                    <div class="module-item"><span class="module-icon">👋</span> Boas-vindas</div>
+                    <div class="module-item"><span class="module-icon">📝</span> Termo de Responsabilidade</div>
+                    <div class="module-item"><span class="module-icon">📊</span> Placar</div>
+                    <div class="module-item"><span class="module-icon">👤</span> Te Conhecendo</div>
+                    <div class="module-item"><span class="module-icon">📅</span> Diário Alimentar</div>
+                    <div class="module-item"><span class="module-icon">🍽️</span> Três Sugestões de Cardápios</div>
+                    <div class="module-item"><span class="module-icon">👨‍🍳</span> Receitas</div>
+                    <div class="module-item"><span class="module-icon">⏰</span> Organização Alimentar</div>
+                    <div class="module-item"><span class="module-icon">🌙</span> Jejum Intermitente</div>
+                    <div class="module-item"><span class="module-icon">🛡️</span> Guardião</div>
+                    <div class="module-item"><span class="module-icon">💪</span> Acreditar em Você</div>
+                    <div class="module-item"><span class="module-icon">🌟</span> A Estética</div>
+                    <div class="module-item"><span class="module-icon">🎯</span> Resultado</div>
+                    <div class="module-item"><span class="module-icon">🔍</span> Auto Análise</div>
+                    <div class="module-item"><span class="module-icon">🚫</span> Não Desista</div>
+                    <div class="module-item"><span class="module-icon">✅</span> O Simples Funciona</div>
+                    <div class="module-item"><span class="module-icon">🩺</span> Saúde Intestinal</div>
+                    <div class="module-item"><span class="module-icon">🏷️</span> Rótulos</div>
+                    <div class="module-item"><span class="module-icon">💧</span> Água e seus Benefícios</div>
+                    <div class="module-item"><span class="module-icon">📊</span> Lei de Paretto</div>
+                    <div class="module-item"><span class="module-icon">🔄</span> Auto Sabotagem</div>
+                    <div class="module-item"><span class="module-icon">🏗️</span> Planejamento</div>
+                    <div class="module-item"><span class="module-icon">⚖️</span> Platô</div>
+                    <div class="module-item"><span class="module-icon">💬</span> Aprenda a Dizer Não</div>
+                    <div class="module-item"><span class="module-icon">🍭</span> Açúcar: Droga</div>
+                    <div class="module-item"><span class="module-icon">🌾</span> Os Perigos do Glúten</div>
+                    <div class="module-item"><span class="module-icon">🧠</span> Doenças</div>
+                    <div class="module-item"><span class="module-icon">😊</span> Autoestima</div>
+                    <div class="module-item"><span class="module-icon">❤️</span> Amo</div>
+                    <div class="module-item"><span class="module-icon">💕</span> Ame o Processo</div>
+                    <div class="module-item"><span class="module-icon">💼</span> Trabalho</div>
+                    <div class="module-item"><span class="module-icon">🏆</span> Merecimento</div>
+                    <div class="module-item"><span class="module-icon">📝</span> Lista de Prosa e Compras</div>
+                    <div class="module-item"><span class="module-icon">🍫</span> Compulsão Alimentar</div>
+                    <div class="module-item" style="border-color: var(--orange-btn); background: rgba(255, 140, 66, 0.1);"><span class="module-icon">🏋️</span> Treinos com Personal para Fazer em Casa <span class="bonus-tag">BÔNUS</span></div>
+                    <div class="module-item" style="border-color: var(--orange-btn); background: rgba(255, 140, 66, 0.1);"><span class="module-icon">🦾</span> Bônus Seu Corpo é Funcional <span class="bonus-tag">BÔNUS</span></div>
+                    <div class="module-item" style="border-color: var(--orange-btn); background: rgba(255, 140, 66, 0.1);"><span class="module-icon">🥤</span> Diferenças entre Light e Diet <span class="bonus-tag">BÔNUS</span></div>
+                    <div class="module-item" style="border-color: var(--orange-btn); background: rgba(255, 140, 66, 0.1);"><span class="module-icon">📚</span> eBooks <span class="bonus-tag">BÔNUS</span></div>
                 </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Imagine sua vida daqui a 20 dias...</h3>
+                <p style="max-width: 700px; margin: 0 auto; color: #ccc;">
+                    Ver a balança marcar até 10 kg a menos. Vestir aquela roupa que você ama e ver que ela ficou soltinha. 
+                    Olhar no espelho e sentir orgulho. Recuperar o desejo e a confiança de estar com seu companheiro sem medo, sem vergonha e com a luz acesa.
+                    <br><br>
+                    <strong>Isso não é um sonho distante. É o resultado do método certo.</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="offer" class="offer-section">
+        <div class="container">
+            <div class="price-card">
+                <h3 style="color: #fff; text-transform: uppercase; letter-spacing: 2px;">Oferta Especial Limitada</h3>
+                <div style="margin: 20px 0;">
+                    <p class="old-price">De R$ 758,00</p>
+                    <p style="color: #fff; font-size: 1.1rem;">Por apenas 12x de</p>
+                    <div class="new-price">R$ 19,78</div>
+                    <p style="color: var(--text-muted);">(ou R$ 197,00 à vista)</p>
+                </div>
+
+                <ul style="text-align: left; margin: 20px 0; color: #ddd; list-style: none;">
+                    <li style="margin-bottom: 10px;">✅ Acesso Completo ao Curso Corpo dos Sonhos</li>
+                    <li style="margin-bottom: 10px;">✅ <strong>BÔNUS 1:</strong> Guia Anti-Inchaço e Saúde Intestinal</li>
+                    <li style="margin-bottom: 10px;">✅ <strong>BÔNUS 2:</strong> Plano de Exercícios Rápido (Casa)</li>
+                    <li style="margin-bottom: 10px;">✅ <strong>BÔNUS 3:</strong> Guia de Receitas Doces Fit</li>
+                    <li style="margin-bottom: 10px;">✅ <strong>BÔNUS 4:</strong> eBooks Exclusivos</li>
+                </ul>
+
+                <div style="margin: 30px 0;">
+                    <img src="https://img.icons8.com/color/96/guarantee.png" alt="Garantia" class="guarantee-badge" style="filter: invert(1); width: 80px;">
+                    <p style="font-weight: bold; color: var(--mint);">GARANTIA INCONDICIONAL DE 7 DIAS</p>
+                    <p style="font-size: 0.9rem; color: #aaa;">Risco Zero. Se não gostar, devolvo 100% do seu dinheiro.</p>
+                </div>
+
+                <a href="#" class="btn-cta">SIM! QUERO ELIMINAR ATÉ 10 KG E RECUPERAR MINHA AUTOESTIMA AGORA!</a>
                 
-                <div class="slider-label label-before">HOJE</div>
-                <div class="slider-label label-after">DAQUI A 30 DIAS</div>
-                
-                <div class="personagem-container">
-                    <div class="personagem personagem-antes" id="personagemAntes">
-                        <svg class="svg-personagem" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Corpo antes (com barriga) -->
-                            <ellipse cx="100" cy="180" rx="70" ry="50" fill="#FFB6A6" opacity="0.8"/>
-                            <circle cx="100" cy="80" r="40" fill="#FFD5B4"/>
-                            <ellipse cx="100" cy="140" rx="50" ry="60" fill="#FFB6A6"/>
-                            <rect x="70" y="200" width="25" height="80" fill="#4A5568" rx="10"/>
-                            <rect x="105" y="200" width="25" height="80" fill="#4A5568" rx="10"/>
-                            <ellipse cx="85" cy="70" rx="8" ry="10" fill="#4A5568"/>
-                            <ellipse cx="115" cy="70" rx="8" ry="10" fill="#4A5568"/>
-                            <path d="M 85 95 Q 100 105 115 95" stroke="#4A5568" stroke-width="3" fill="none"/>
-                            <path d="M 90 115 Q 100 105 110 115" stroke="#E57373" stroke-width="2" fill="none"/>
-                            <!-- Braços caídos -->
-                            <ellipse cx="50" cy="150" rx="20" ry="40" fill="#FFB6A6" transform="rotate(20 50 150)"/>
-                            <ellipse cx="150" cy="150" rx="20" ry="40" fill="#FFB6A6" transform="rotate(-20 150 150)"/>
-                        </svg>
-                    </div>
-                    <div class="personagem personagem-depois" id="personagemDepois">
-                        <svg class="svg-personagem" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Corpo depois (magro e feliz) -->
-                            <ellipse cx="100" cy="180" rx="40" ry="30" fill="#98FFD8" opacity="0.8"/>
-                            <circle cx="100" cy="80" r="35" fill="#FFE5CC"/>
-                            <ellipse cx="100" cy="140" rx="30" ry="50" fill="#98FFD8"/>
-                            <rect x="75" y="190" width="20" height="90" fill="#4A5568" rx="8"/>
-                            <rect x="105" y="190" width="20" height="90" fill="#4A5568" rx="8"/>
-                            <ellipse cx="85" cy="70" rx="7" ry="9" fill="#4A5568"/>
-                            <ellipse cx="115" cy="70" rx="7" ry="9" fill="#4A5568"/>
-                            <path d="M 80 95 Q 100 115 120 95" stroke="#4A5568" stroke-width="3" fill="none"/>
-                            <!-- Sorriso grande -->
-                            <path d="M 85 105 Q 100 125 115 105" stroke="#4CAF50" stroke-width="3" fill="none"/>
-                            <!-- Braços levantados (feliz) -->
-                            <ellipse cx="50" cy="120" rx="18" ry="35" fill="#98FFD8" transform="rotate(-45 50 120)"/>
-                            <ellipse cx="150" cy="120" rx="18" ry="35" fill="#98FFD8" transform="rotate(45 150 120)"/>
-                            <!-- Olhos brilhantes -->
-                            <circle cx="85" cy="68" r="3" fill="#FFF"/>
-                            <circle cx="115" cy="68" r="3" fill="#FFF"/>
-                        </svg>
-                    </div>
-                </div>
+                <p style="margin-top: 20px; font-size: 0.8rem; color: #666;">
+                    🔒 Acesso imediato e seguro | Pagamento 100% protegido
+                </p>
             </div>
-        </div>
-    </section>
 
-    <section class="features">
-        <div class="container">
-            <h2 style="text-align: center; font-size: 36px; margin-bottom: 20px;">Por Que Este Curso é Diferente?</h2>
-            <div class="features-grid">
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">🎥</div>
-                    <h3>Aulas 100% Gravadas</h3>
-                    <p>Assista no seu tempo, quantas vezes quiser. Sem horários fixos, sem pressão. Você no controle total do seu aprendizado.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Acesso Imediato</h3>
-                    <p>Comprou, começou! Receba acesso instantâneo a todas as aulas gravadas e comece sua transformação hoje mesmo.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">📱</div>
-                    <h3>Multi-Plataforma</h3>
-                    <p>Assista no celular, tablet ou computador. Suas aulas gravadas disponíveis 24/7 em qualquer dispositivo.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">🔄</div>
-                    <h3>Reveja Quantas Vezes Quiser</h3>
-                    <p>Não entendeu algo? Volte e assista novamente. As aulas gravadas são suas para sempre!</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">🏠</div>
-                    <h3>Treine em Casa</h3>
-                    <p>Sem academia, sem equipamentos caros. Exercícios que você pode fazer no conforto da sua casa, seguindo as aulas gravadas.</p>
-                </div>
-                <div class="feature-card fade-in">
-                    <div class="feature-icon">📊</div>
-                    <h3>Resultados Comprovados</h3>
-                    <p>Mais de 15.000 alunos transformados com nosso método de aulas gravadas. Sua vez chegou!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="aulas-gravadas">
-        <div class="container">
-            <div class="aulas-content">
-                <div class="aulas-text">
-                    <h2>🎯 Aulas Gravadas: Sua Liberdade para Emagrecer</h2>
-                    <p style="font-size: 18px; line-height: 1.8;">Esqueça horarios fixos e compromissos impossíveis. Com nossas <strong>aulas 100% gravadas</strong>, você tem total liberdade para assistir quando e onde quiser.</p>
-                    <ul>
-                        <li><strong>Aulas em HD</strong> - Qualidade cinematográfica para você não perder nenhum detalhe</li>
-                        <li><strong>Acesso Vitalício</strong> - As aulas gravadas são suas para sempre</li>
-                        <li><strong>Atualizações Gratuitas</strong> - Novo conteúdo gravado regularmente</li>
-                        <li><strong>Download Disponível</strong> - Baixe e assista offline quando quiser</li>
-                        <li><strong>Ritmo Personalizado</strong> - Pause, volte e avance no seu próprio ritmo</li>
-                    </ul>
-                </div>
-                <div class="aulas-image">
-                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=600&h=400&fit=crop" alt="Pessoa assistindo aula gravada">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="depoimentos">
-        <div class="container">
-            <h2 style="text-align: center; font-size: 36px; margin-bottom: 20px;">Histórias Reais de Transformação</h2>
-            <div class="depoimentos-grid">
-                <div class="depoimento-card fade-in">
-                    <p class="depoimento-text">"Perdi 12kg em 30 dias! O melhor é que eu assistia as aulas gravadas quando chegava do trabalho. Sem pressão de horario!"</p>
-                    <div class="depoimento-author">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Maria Silva">
-                        <div>
-                            <strong>Maria Silva</strong>
-                            <p style="font-size: 14px;">-12kg em 30 dias</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="depoimento-card fade-in">
-                    <p class="depoimento-text">"Como mãe de dois filhos, não tinha tempo para academias. As aulas gravadas foram minha salvação! Perdi 8kg assistindo em casa."</p>
-                    <div class="depoimento-author">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Ana Costa">
-                        <div>
-                            <strong>Ana Costa</strong>
-                            <p style="font-size: 14px;">-8kg em 30 dias</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="depoimento-card fade-in">
-                    <p class="depoimento-text">"Trabalho em turnos e nunca conseguia seguir um curso normal. Com as aulas gravadas, eu assistia quando podia. Resultado: 15kg a menos!"</p>
-                    <div class="depoimento-author">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Carlos Oliveira">
-                        <div>
-                            <strong>Carlos Oliveira</strong>
-                            <p style="font-size: 14px;">-15kg em 30 dias</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="pricing">
-        <div class="container">
-            <div class="pricing-card">
-                <h2 style="font-size: 32px; margin-bottom: 20px;">Comece Sua Transformação Hoje!</h2>
-                <p style="color: #718096; margin-bottom: 20px;">Acesso completo a todas as aulas gravadas</p>
-                <div class="pricing-old">De R$ 497,90</div>
-                <div class="pricing-current">R$ 147,90</div>
-                <p class="pricing-installments">ou 12x de R$ 14,90</p>
-                <button class="btn-compra">QUERO EMAGRECER AGORA!</button>
-                <div class="garantia">
-                    <span style="font-size: 30px;">🛡️</span>
-                    <span>Garantia de 7 dias ou seu dinheiro de volta</span>
-                </div>
-                <p style="margin-top: 20px; color: #A0AEC0; font-size: 14px;">+15.000 alunos transformados com aulas gravadas</p>
+            <div style="margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto; text-align: left; border-top: 1px solid #333; pt-4">
+                <h3 style="color: #fff; margin-bottom: 20px;">Você tem duas escolhas agora:</h3>
+                <p style="margin-bottom: 15px;"><strong>Escolha 1:</strong> Fechar esta página e continuar exatamente onde está. Aceitar a vergonha do próprio corpo, a falta de libido, o inchaço diário e a frustração de não conseguir emagrecer.</p>
+                <p><strong>Escolha 2:</strong> Tomar a decisão de transformar sua vida hoje. Dar o primeiro passo para eliminar até 10 kg em 20 dias e resgatar a mulher confiante e atraente que está escondida aí dentro.</p>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Transformação 30D - Todos os direitos reservados</p>
-            <p style="margin-top: 10px; font-size: 14px; color: #A0AEC0;">Curso 100% online com aulas gravadas</p>
+            <p>&copy; 2023 Corpo dos Sonhos. Todos os direitos reservados.</p>
+            <p style="margin-top: 10px; font-size: 0.7rem;">Este site não faz parte do site do Facebook ou Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira.</p>
         </div>
     </footer>
 
     <script>
-        // Slider Antes e Depois Funcional
-        const sliderContainer = document.getElementById('sliderContainer');
-        const sliderBefore = document.getElementById('sliderBefore');
-        const sliderHandle = document.getElementById('sliderHandle');
-        const personagemAntes = document.getElementById('personagemAntes');
-        const personagemDepois = document.getElementById('personagemDepois');
+        const slider = document.getElementById('transform-slider');
+        const afterSlide = document.getElementById('after-slide');
+        const afterLabel = document.getElementById('after-label');
 
-        let isDragging = false;
-
-        function updateSlider(position) {
-            const containerWidth = sliderContainer.offsetWidth;
-            let percentage = (position / containerWidth) * 100;
+        slider.addEventListener('input', function() {
+            const val = this.value;
             
-            // Limitar entre 10% e 90%
-            percentage = Math.max(10, Math.min(90, percentage));
+            afterSlide.style.clipPath = `polygon(0 0, ${val}% 0, ${val}% 100%, 0 100%)`;
             
-            sliderBefore.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
-            sliderHandle.style.left = `${percentage}%`;
-            
-            // Atualizar personagens
-            const beforeOpacity = 1 - (percentage - 10) / 80;
-            const afterOpacity = (percentage - 10) / 80;
-            
-            personagemAntes.style.opacity = beforeOpacity;
-            personagemAntes.style.filter = `brightness(${0.7 + (beforeOpacity * 0.3)})`;
-            
-            personagemDepois.style.opacity = afterOpacity;
-            personagemDepois.style.filter = `brightness(${0.7 + (afterOpacity * 0.3)})`;
-            
-            // Mover personagens
-            const beforeLeft = 50 - 250 - ((percentage - 50) * 2);
-            const afterRight = 50 - 250 + ((percentage - 50) * 2);
-            
-            personagemAntes.style.left = `calc(50% + ${beforeLeft}px)`;
-            personagemDepois.style.right = `calc(50% - ${afterRight}px)`;
-        }
-
-        // Eventos de Mouse
-        sliderHandle.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            sliderHandle.style.transform = 'translateX(-50%) scale(1.1)';
-        });
-
-        document.addEventListener('mouseup', () => {
-            isDragging = false;
-            sliderHandle.style.transform = 'translateX(-50%) scale(1)';
-        });
-
-        document.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
-            e.preventDefault();
-            const rect = sliderContainer.getBoundingClientRect();
-            const position = e.clientX - rect.left;
-            updateSlider(position);
-        });
-
-        // Eventos de Touch
-        sliderHandle.addEventListener('touchstart', (e) => {
-            isDragging = true;
-            sliderHandle.style.transform = 'translateX(-50%) scale(1.1)';
-        });
-
-        document.addEventListener('touchend', () => {
-            isDragging = false;
-            sliderHandle.style.transform = 'translateX(-50%) scale(1)';
-        });
-
-        document.addEventListener('touchmove', (e) => {
-            if (!isDragging) return;
-            const rect = sliderContainer.getBoundingClientRect();
-            const position = e.touches[0].clientX - rect.left;
-            updateSlider(position);
-        });
-
-        // Clique direto no container
-        sliderContainer.addEventListener('click', (e) => {
-            const rect = sliderContainer.getBoundingClientRect();
-            const position = e.clientX - rect.left;
-            updateSlider(position);
-        });
-
-        // Animação de fade-in ao scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Smooth scroll para botões de compra
-        document.querySelectorAll('.btn-compra').forEach(button => {
-            button.addEventListener('click', () => {
-                document.querySelector('.pricing').scrollIntoView({ 
-                    behavior: 'smooth' 
-                });
-            });
+            if(val > 10) {
+                afterLabel.style.opacity = 1;
+            } else {
+                afterLabel.style.opacity = 0;
+            }
         });
     </script>
 </body>
