@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corpo dos Sonhos | Transformação em 20 Dias</title>
-    <!-- Fontes Mais Chamativas e Legíveis -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Corpo dos Sonhos | O Método Definitivo</title>
+    <!-- Fontes Montserrat (Títulos) e Open Sans (Texto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-dark: #050505;
@@ -16,7 +16,8 @@
             --orange-btn: #FF7043;
             --orange-hover: #FF5722;
             --text-main: #f0f0f0;
-            --text-muted: #b0b0b0;
+            --text-muted: #a0a0a0;
+            --yellow-highlight: #FFEA00; /* Amarelo Chamativo */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -24,50 +25,49 @@
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
-            font-family: 'Open Sans', sans-serif; /* Fonte de leitura fácil */
             overflow-x: hidden;
             line-height: 1.6;
+            font-family: 'Open Sans', sans-serif; /* Texto legível */
             background-image: radial-gradient(circle at 50% 0%, #1a1a1a 0%, #050505 70%);
         }
 
         h1, h2, h3, h4 { 
-            font-family: 'Montserrat', sans-serif; /* Fonte de impacto */
+            font-family: 'Montserrat', sans-serif; /* Títulos chamativos */
             font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: -0.5px;
+            line-height: 1.2;
         }
 
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
         .brand-name {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: var(--mint);
-            font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 2px;
-            border-bottom: 3px solid var(--orange-btn);
+            border-bottom: 2px solid var(--orange-btn);
             padding-bottom: 5px;
             display: inline-block;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
+            font-weight: 900;
         }
 
-        .highlight { color: var(--mint); font-weight: 700; }
-        .text-orange { color: var(--orange-btn); font-weight: 800; }
+        .highlight { color: var(--mint); font-weight: 600; }
+        .text-orange { color: var(--orange-btn); font-weight: 700; }
+        .text-yellow { color: var(--yellow-highlight); font-weight: 700; }
 
-        /* Botão CTA de Alta Conversão */
+        /* Botão CTA Premium */
         .btn-cta {
             display: inline-block;
             background: linear-gradient(45deg, var(--orange-btn), #ff9100);
             color: #fff;
-            padding: 22px 40px;
-            font-size: 1.2rem;
-            font-family: 'Montserrat', sans-serif;
+            padding: 20px 40px;
+            font-size: 1.1rem;
             font-weight: 800;
             text-transform: uppercase;
             text-decoration: none;
-            border-radius: 8px;
-            box-shadow: 0 0 25px rgba(255, 112, 67, 0.5);
+            border-radius: 5px;
+            box-shadow: 0 0 25px rgba(255, 112, 67, 0.4);
             transition: all 0.3s ease;
             text-align: center;
             width: 100%;
@@ -77,7 +77,8 @@
             border: none;
             cursor: pointer;
             letter-spacing: 1px;
-            margin-top: 20px;
+            font-family: 'Montserrat', sans-serif;
+            margin: 20px 0;
         }
 
         .btn-cta::before {
@@ -90,9 +91,9 @@
         }
 
         .btn-cta:hover::before { left: 100%; }
-        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 0 40px rgba(255, 112, 67, 0.7); }
+        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 0 40px rgba(255, 112, 67, 0.6); }
 
-        /* Header Hero com Nova Headline */
+        /* Header Hero */
         header {
             padding: 60px 0 40px;
             text-align: center;
@@ -100,39 +101,39 @@
         }
 
         .badge-online {
-            background: rgba(152, 255, 216, 0.08);
+            background: rgba(152, 255, 216, 0.05);
             color: var(--mint);
             padding: 8px 24px;
             border-radius: 50px;
             font-size: 0.85rem;
-            font-weight: 700;
+            font-weight: 600;
             display: inline-block;
             margin-bottom: 25px;
             border: 1px solid rgba(152, 255, 216, 0.3);
             text-transform: uppercase;
             letter-spacing: 1.5px;
             backdrop-filter: blur(5px);
+            font-family: 'Montserrat', sans-serif;
         }
 
         .hero-title {
             font-size: 2.8rem;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             color: #fff;
-            line-height: 1.2;
             text-shadow: 0 0 20px rgba(0,0,0,0.8);
-            background: linear-gradient(to right, #ffffff, #e0e0e0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
         .hero-subtitle {
-            font-size: 1.2rem;
-            color: var(--text-muted);
+            font-size: 1.3rem;
+            color: var(--yellow-highlight); /* AMARELO CHAMATIVO */
             margin-bottom: 40px;
-            max-width: 800px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
-            font-weight: 400;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
 
         /* VSL Placeholder */
@@ -179,7 +180,7 @@
             100% { box-shadow: 0 0 0 0 rgba(255, 112, 67, 0); }
         }
 
-        /* Slider com Fotos Reais */
+        /* Slider Transformação com Fotos Reais */
         .slider-section {
             padding: 80px 0;
             background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-card) 100%);
@@ -190,8 +191,8 @@
         .slider-wrapper {
             position: relative;
             width: 100%;
-            max-width: 800px;
-            height: 500px; /* Altura ajustada para fotos reais */
+            max-width: 700px;
+            height: 500px;
             margin: 0 auto;
             border-radius: 20px;
             overflow: hidden;
@@ -211,49 +212,48 @@
             background-repeat: no-repeat;
         }
 
-        /* Imagem DEPOIS (Fundo) */
-        #after-slide {
-            /* A imagem de fundo fica fixa */
+        #before-slide {
+            /* Foto ANTES */
+            background-image: url('fotoantes.jpg'); 
             z-index: 1;
         }
 
-        /* Imagem ANTES (Sobreposta com Clip-Path) */
-        #before-slide {
+        #after-slide {
+            /* Foto DEPOIS */
+            background-image: url('fotodepois.jpg');
             z-index: 2;
-            /* Começa mostrando 100% da imagem Antes */
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            transition: clip-path 0.1s ease-out;
+            clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
         }
 
         .slide-label {
             position: absolute;
             top: 25px;
-            padding: 10px 25px;
+            padding: 8px 20px;
             border-radius: 30px;
             font-weight: 800;
-            font-size: 1rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             backdrop-filter: blur(8px);
             z-index: 10;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             font-family: 'Montserrat', sans-serif;
         }
 
         .label-before { 
             left: 25px; 
-            color: #fff; 
-            background: rgba(255, 87, 34, 0.8);
-            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: #ff6b6b; 
+            background: rgba(255, 107, 107, 0.15);
+            border: 1px solid rgba(255, 107, 107, 0.4);
         }
 
         .label-after { 
             right: 25px; 
-            color: #000; 
-            background: rgba(152, 255, 216, 0.9);
-            border: 2px solid #fff;
+            color: var(--mint); 
+            background: rgba(152, 255, 216, 0.15);
+            border: 1px solid rgba(152, 255, 216, 0.4);
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.4s ease;
         }
 
         .slider-controls {
@@ -263,16 +263,18 @@
             transform: translateX(-50%);
             width: 85%;
             z-index: 20;
-            background: rgba(0, 0, 0, 0.6);
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(12px);
-            padding: 15px 30px;
+            padding: 20px 30px;
             border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
             gap: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
+
+        .slider-icon { font-size: 1.2rem; color: var(--text-muted); }
 
         input[type="range"] {
             flex: 1;
@@ -283,14 +285,14 @@
 
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
-            height: 32px;
-            width: 32px;
+            height: 28px;
+            width: 28px;
             border-radius: 50%;
-            background: #fff;
+            background: var(--orange-btn);
             cursor: pointer;
-            margin-top: -14px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-            border: 4px solid var(--orange-btn);
+            margin-top: -12px;
+            box-shadow: 0 0 15px var(--orange-btn), inset 0 0 5px rgba(255,255,255,0.5);
+            border: 2px solid #fff;
             transition: transform 0.2s;
         }
 
@@ -300,7 +302,7 @@
             width: 100%;
             height: 4px;
             cursor: pointer;
-            background: rgba(255,255,255,0.3);
+            background: #444;
             border-radius: 2px;
         }
 
@@ -309,7 +311,7 @@
         
         .section-header { text-align: center; margin-bottom: 60px; }
         .section-header h2 { font-size: 2.2rem; color: #fff; margin-bottom: 15px; }
-        .section-header p { color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
+        .section-header p { color: var(--text-muted); max-width: 700px; margin: 0 auto; }
 
         .pain-grid {
             display: grid;
@@ -321,7 +323,7 @@
             background: var(--bg-panel);
             padding: 30px;
             border-radius: 12px;
-            border-left: 4px solid #ff4757;
+            border-left: 3px solid #ff4757;
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
@@ -329,7 +331,7 @@
 
         .pain-card:hover { transform: translateY(-5px); background: #222; }
         .pain-card h3 { color: #ff6b6b; margin-bottom: 12px; font-size: 1.2rem; font-family: 'Montserrat', sans-serif; font-weight: 700; }
-        .pain-card p { font-size: 1rem; color: #ccc; line-height: 1.6; }
+        .pain-card p { font-size: 0.95rem; color: #ccc; }
 
         /* Modules & Solution */
         .solution-section { padding: 80px 0; background: var(--bg-card); border-top: 1px solid #222; }
@@ -359,7 +361,6 @@
             border: 1px solid transparent;
             transition: all 0.3s;
             color: #ddd;
-            font-weight: 600;
         }
 
         .module-item:hover {
@@ -443,6 +444,7 @@
 
         @media (max-width: 768px) {
             .hero-title { font-size: 2rem; }
+            .hero-subtitle { font-size: 1.1rem; }
             .slider-wrapper { height: 400px; }
             .new-price { font-size: 3rem; }
             .method-box { padding: 30px 20px; }
@@ -457,18 +459,11 @@
             <br>
             <span class="badge-online">🔒 Método 100% Online • Aulas Gravadas • Válido por 1 Ano</span>
             
-            <!-- NOVA HEADLINE CHAMATIVA -->
-            <h1 class="hero-title">
-                Imagine sua vida daqui a 20 dias...<br>
-                <span style="font-size: 0.7em; display: block; margin-top: 15px; font-weight: 700; color: var(--mint);">
-                    Ver a balança marcar até 10 kg a menos. Vestir aquela roupa que você ama e ver que ela ficou soltinha. Olhar no espelho e sentir orgulho da mulher do Corpo dos Sonhos que você se tornou. Recuperar o desejo e a confiança de estar com seu companheiro sem medo, sem vergonha e com a luz acesa.
-                </span>
-                <span style="font-size: 0.6em; display: block; margin-top: 20px; color: #fff; font-style: italic;">
-                    Isso não é um sonho distante. É o resultado do método certo.
-                </span>
-            </h1>
+            <!-- HEADLINE ALTERADA -->
+            <h1 class="hero-title">Você olha no espelho e já não reconhece mais a mulher que vê?</h1>
             
-            <p class="hero-subtitle">Elimine até 10 kg em apenas 20 dias, recupere sua autoestima e volte a se sentir desejada — <span class="highlight">sem dietas malucas e sem passar horas na academia.</span></p>
+            <!-- SUBTÍTULO EM AMARELO CHAMATIVO -->
+            <p class="hero-subtitle">Imagine sua vida daqui a 20 dias...</p>
             
             <div class="vsl-container">
                 <div class="vsl-overlay"></div>
@@ -478,6 +473,7 @@
                 <p style="position: absolute; bottom: 20px; color: #fff; font-weight: 600; letter-spacing: 1px; z-index: 2;">ASSISTA À APRESENTAÇÃO DO MÉTODO</p>
             </div>
 
+            <!-- BOTÃO DE COMPRA 1 -->
             <a href="#offer" class="btn-cta">QUERO TRANSFORMAR MEU CORPO E MINHA VIDA AGORA!</a>
         </div>
     </header>
@@ -490,25 +486,28 @@
             </div>
             
             <div class="slider-wrapper">
-                <!-- IMAGEM DEPOIS (FUNDO) -->
-                <!-- Substitua 'fotodepois.jpg' pelo caminho correto se estiver em subpasta -->
-                <div class="slide-image" id="after-slide" style="background-image: url('fotodepois.jpg');"></div>
-                
-                <!-- IMAGEM ANTES (SOBREPOSTA) -->
-                <!-- Substitua 'fotoantes.jpg' pelo caminho correto se estiver em subpasta -->
-                <div class="slide-image" id="before-slide" style="background-image: url('fotoantes.jpg');">
+                <!-- SLIDE ANTES (Foto do repositório) -->
+                <div class="slide-image" id="before-slide">
                     <span class="slide-label label-before">HOJE</span>
                 </div>
 
-                <span class="slide-label label-after" id="after-label">DAQUI A 20 DIAS</span>
+                <!-- SLIDE DEPOIS (Foto do repositório) -->
+                <div class="slide-image" id="after-slide">
+                    <span class="slide-label label-after" id="after-label">DAQUI A 20 DIAS</span>
+                </div>
 
                 <div class="slider-controls">
-                    <span style="color: #ff6b6b; font-weight: bold; font-size: 0.9rem;">ANTES</span>
+                    <span class="slider-icon">😞</span>
                     <input type="range" min="0" max="100" value="0" id="transform-slider">
-                    <span style="color: var(--mint); font-weight: bold; font-size: 0.9rem;">DEPOIS</span>
+                    <span class="slider-icon">😍</span>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 20px; color: #666; font-size: 0.9rem;">Interaja para ver seu potencial real</p>
+            <p style="text-align: center; margin-top: 20px; color: #666; font-size: 0.9rem;">Interaja para ver seu potencial</p>
+            
+            <!-- BOTÃO DE COMPRA 2 (NOVO) -->
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#offer" class="btn-cta" style="max-width: 400px; font-size: 1rem;">QUERO PERDER 10KG EM 20 DIAS</a>
+            </div>
         </div>
     </section>
 
@@ -549,6 +548,9 @@
                     <br><br>
                     <strong style="color: #fff; font-size: 1.2rem;">O Método Corpo dos Sonhos foi feito para a SUA realidade.</strong>
                 </p>
+                
+                <!-- BOTÃO DE COMPRA 3 (NOVO) -->
+                <a href="#offer" class="btn-cta" style="max-width: 350px; margin-top: 30px;">ADQUIRA AQUI</a>
             </div>
         </div>
     </section>
@@ -619,13 +621,13 @@
 
             <div style="text-align: center; margin-top: 60px;">
                 <h3 style="font-size: 2rem; margin-bottom: 20px; color: #fff; font-family: 'Montserrat', sans-serif;">Imagine sua vida daqui a 20 dias...</h3>
+                <!-- TEXTO REMOVIDO CONFORME SOLICITADO -->
                 <p style="max-width: 700px; margin: 0 auto; color: #ccc; font-size: 1.1rem; line-height: 1.8;">
-                    Ver a balança marcar até 10 kg a menos. Vestir aquela roupa que você ama e ver que ela ficou soltinha. 
-                    Olhar no espelho e sentir orgulho da mulher do <strong>Corpo dos Sonhos</strong> que você se tornou. 
-                    Recuperar o desejo e a confiança de estar com seu companheiro sem medo, sem vergonha e com a luz acesa.
-                    <br><br>
                     <strong style="color: var(--mint);">Isso não é um sonho distante. É o resultado do método certo.</strong>
                 </p>
+                
+                <!-- BOTÃO DE COMPRA 4 (NOVO) -->
+                <a href="#offer" class="btn-cta" style="max-width: 400px; margin-top: 30px;">QUERO ADQUIRIR AGORA</a>
             </div>
         </div>
     </section>
@@ -634,7 +636,7 @@
         <div class="container">
             <div class="price-card">
                 <h3 style="color: #fff; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Oferta Especial de Lançamento</h3>
-                <p style="color: var(--mint); font-weight: 600; margin-bottom: 20px;">ACESSO AO CORPO DOS SONHOS POR 1 ANO</p>
+                <p style="color: var(--mint); font-weight: 600; margin-bottom: 20px;">ACESSO AO CORPO DOS SONHOS (VÁLIDO POR 1 ANO)</p>
                 
                 <div style="margin: 30px 0;">
                     <p class="old-price">De R$ 758,00</p>
@@ -646,7 +648,7 @@
                 <ul style="text-align: left; margin: 30px 0; color: #ddd; list-style: none; padding: 0 20px;">
                     <li style="margin-bottom: 12px; display: flex; align-items: start;">
                         <span style="color: var(--mint); margin-right: 10px;">✓</span> 
-                        <div><strong>Acesso Completo ao Curso Corpo dos Sonhos</strong><br><span style="font-size: 0.85rem; color: #888;">Aulas gravadas para assistir quando quiser (1 ano)</span></div>
+                        <div><strong>Acesso Completo ao Curso Corpo dos Sonhos</strong><br><span style="font-size: 0.85rem; color: #888;">Aulas gravadas para assistir quando quiser</span></div>
                     </li>
                     <li style="margin-bottom: 12px; display: flex; align-items: start;">
                         <span style="color: var(--mint); margin-right: 10px;">✓</span> 
@@ -666,7 +668,7 @@
                     </li>
                 </ul>
 
-                <a href="#" class="btn-cta">SIM! QUERO ELIMINAR ATÉ 10 KG E RECUPERAR MINHA AUTOESTIMA AGORA!</a>
+                <a href="#" class="btn-cta">SIM! QUERO ELIMINAR ATÉ 10 KG EM 20 DIAS!</a>
                 
                 <div class="guarantee-box">
                     <img src="https://img.icons8.com/color/96/guarantee.png" alt="Garantia" style="width: 60px; filter: invert(1); margin-bottom: 10px;">
@@ -699,20 +701,16 @@
 
     <script>
         const slider = document.getElementById('transform-slider');
-        const beforeSlide = document.getElementById('before-slide');
+        const afterSlide = document.getElementById('after-slide');
         const afterLabel = document.getElementById('after-label');
 
         slider.addEventListener('input', function() {
             const val = this.value;
             
-            // Lógica invertida para revelar o "Depois" (que está no fundo)
-            // Quando val = 0, mostramos 100% do Antes (clip-path 100%)
-            // Quando val = 100, mostramos 0% do Antes (clip-path 0%)
-            const clipValue = 100 - val;
+            // Move o clip-path para revelar a imagem "Depois"
+            afterSlide.style.clipPath = `polygon(0 0, ${val}% 0, ${val}% 100%, 0 100%)`;
             
-            beforeSlide.style.clipPath = `polygon(0 0, ${clipValue}% 0, ${clipValue}% 100%, 0 100%)`;
-            
-            // Efeito de fade no label "Daqui a 20 dias"
+            // Efeito de fade no label
             if(val > 10) {
                 afterLabel.style.opacity = 1;
             } else {
