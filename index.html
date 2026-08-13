@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corpo dos Sonhos | O Método Definitivo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Corpo dos Sonhos | Transformação em 20 Dias</title>
+    <!-- Fontes Mais Chamativas e Legíveis -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-dark: #050505;
@@ -12,56 +13,61 @@
             --bg-panel: #1a1a1a;
             --mint: #98FFD8;
             --mint-glow: rgba(152, 255, 216, 0.15);
-            --blue-pastel: #B8E0F2;
             --orange-btn: #FF7043;
             --orange-hover: #FF5722;
             --text-main: #f0f0f0;
-            --text-muted: #a0a0a0;
-            --gold: #FFD700;
+            --text-muted: #b0b0b0;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             background-color: var(--bg-dark);
             color: var(--text-main);
+            font-family: 'Open Sans', sans-serif; /* Fonte de leitura fácil */
             overflow-x: hidden;
             line-height: 1.6;
             background-image: radial-gradient(circle at 50% 0%, #1a1a1a 0%, #050505 70%);
         }
 
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
-        /* Tipografia de Personalidade */
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        
-        .brand-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            color: var(--mint);
+        h1, h2, h3, h4 { 
+            font-family: 'Montserrat', sans-serif; /* Fonte de impacto */
+            font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            border-bottom: 2px solid var(--orange-btn);
-            padding-bottom: 5px;
-            display: inline-block;
-            margin-bottom: 20px;
+            letter-spacing: -0.5px;
         }
 
-        .highlight { color: var(--mint); font-weight: 600; }
-        .text-orange { color: var(--orange-btn); font-weight: 700; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        /* Botão CTA Premium */
+        .brand-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            color: var(--mint);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 3px solid var(--orange-btn);
+            padding-bottom: 5px;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        .highlight { color: var(--mint); font-weight: 700; }
+        .text-orange { color: var(--orange-btn); font-weight: 800; }
+
+        /* Botão CTA de Alta Conversão */
         .btn-cta {
             display: inline-block;
             background: linear-gradient(45deg, var(--orange-btn), #ff9100);
             color: #fff;
-            padding: 20px 40px;
-            font-size: 1.1rem;
-            font-weight: 700;
+            padding: 22px 40px;
+            font-size: 1.2rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
             text-transform: uppercase;
             text-decoration: none;
-            border-radius: 5px;
-            box-shadow: 0 0 25px rgba(255, 112, 67, 0.4);
+            border-radius: 8px;
+            box-shadow: 0 0 25px rgba(255, 112, 67, 0.5);
             transition: all 0.3s ease;
             text-align: center;
             width: 100%;
@@ -71,6 +77,7 @@
             border: none;
             cursor: pointer;
             letter-spacing: 1px;
+            margin-top: 20px;
         }
 
         .btn-cta::before {
@@ -83,9 +90,9 @@
         }
 
         .btn-cta:hover::before { left: 100%; }
-        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 0 40px rgba(255, 112, 67, 0.6); }
+        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 0 40px rgba(255, 112, 67, 0.7); }
 
-        /* Header Hero */
+        /* Header Hero com Nova Headline */
         header {
             padding: 60px 0 40px;
             text-align: center;
@@ -93,12 +100,12 @@
         }
 
         .badge-online {
-            background: rgba(152, 255, 216, 0.05);
+            background: rgba(152, 255, 216, 0.08);
             color: var(--mint);
             padding: 8px 24px;
             border-radius: 50px;
             font-size: 0.85rem;
-            font-weight: 600;
+            font-weight: 700;
             display: inline-block;
             margin-bottom: 25px;
             border: 1px solid rgba(152, 255, 216, 0.3);
@@ -109,20 +116,23 @@
 
         .hero-title {
             font-size: 2.8rem;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             color: #fff;
             line-height: 1.2;
             text-shadow: 0 0 20px rgba(0,0,0,0.8);
+            background: linear-gradient(to right, #ffffff, #e0e0e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .hero-subtitle {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--text-muted);
             margin-bottom: 40px;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
-            font-weight: 300;
+            font-weight: 400;
         }
 
         /* VSL Placeholder */
@@ -169,7 +179,7 @@
             100% { box-shadow: 0 0 0 0 rgba(255, 112, 67, 0); }
         }
 
-        /* Slider Transformação Premium */
+        /* Slider com Fotos Reais */
         .slider-section {
             padding: 80px 0;
             background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-card) 100%);
@@ -180,8 +190,8 @@
         .slider-wrapper {
             position: relative;
             width: 100%;
-            max-width: 700px;
-            height: 500px;
+            max-width: 800px;
+            height: 500px; /* Altura ajustada para fotos reais */
             margin: 0 auto;
             border-radius: 20px;
             overflow: hidden;
@@ -190,53 +200,60 @@
             border: 1px solid #333;
         }
 
-        .slide-content {
+        .slide-image {
             position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-            background: radial-gradient(circle at 50% 30%, #2a2a2a 0%, #111 100%);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Imagem DEPOIS (Fundo) */
+        #after-slide {
+            /* A imagem de fundo fica fixa */
+            z-index: 1;
+        }
+
+        /* Imagem ANTES (Sobreposta com Clip-Path) */
+        #before-slide {
+            z-index: 2;
+            /* Começa mostrando 100% da imagem Antes */
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            transition: clip-path 0.1s ease-out;
         }
 
         .slide-label {
             position: absolute;
             top: 25px;
-            padding: 8px 20px;
+            padding: 10px 25px;
             border-radius: 30px;
-            font-weight: 700;
-            font-size: 0.9rem;
+            font-weight: 800;
+            font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             backdrop-filter: blur(8px);
             z-index: 10;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            font-family: 'Montserrat', sans-serif;
         }
 
         .label-before { 
             left: 25px; 
-            color: #ff6b6b; 
-            background: rgba(255, 107, 107, 0.15);
-            border: 1px solid rgba(255, 107, 107, 0.4);
+            color: #fff; 
+            background: rgba(255, 87, 34, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.2);
         }
 
         .label-after { 
             right: 25px; 
-            color: var(--mint); 
-            background: rgba(152, 255, 216, 0.15);
-            border: 1px solid rgba(152, 255, 216, 0.4);
+            color: #000; 
+            background: rgba(152, 255, 216, 0.9);
+            border: 2px solid #fff;
             opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
-        /* SVG Styles Realistas */
-        .character-svg {
-            height: 85%;
-            width: auto;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
-            transition: transform 0.1s;
+            transition: opacity 0.3s ease;
         }
 
         .slider-controls {
@@ -246,18 +263,16 @@
             transform: translateX(-50%);
             width: 85%;
             z-index: 20;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(0, 0, 0, 0.6);
             backdrop-filter: blur(12px);
-            padding: 20px 30px;
+            padding: 15px 30px;
             border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             display: flex;
             align-items: center;
             gap: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-
-        .slider-icon { font-size: 1.2rem; color: var(--text-muted); }
 
         input[type="range"] {
             flex: 1;
@@ -268,14 +283,14 @@
 
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
-            height: 28px;
-            width: 28px;
+            height: 32px;
+            width: 32px;
             border-radius: 50%;
-            background: var(--orange-btn);
+            background: #fff;
             cursor: pointer;
-            margin-top: -12px;
-            box-shadow: 0 0 15px var(--orange-btn), inset 0 0 5px rgba(255,255,255,0.5);
-            border: 2px solid #fff;
+            margin-top: -14px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+            border: 4px solid var(--orange-btn);
             transition: transform 0.2s;
         }
 
@@ -285,7 +300,7 @@
             width: 100%;
             height: 4px;
             cursor: pointer;
-            background: #444;
+            background: rgba(255,255,255,0.3);
             border-radius: 2px;
         }
 
@@ -294,7 +309,7 @@
         
         .section-header { text-align: center; margin-bottom: 60px; }
         .section-header h2 { font-size: 2.2rem; color: #fff; margin-bottom: 15px; }
-        .section-header p { color: var(--text-muted); max-width: 700px; margin: 0 auto; }
+        .section-header p { color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
 
         .pain-grid {
             display: grid;
@@ -306,23 +321,15 @@
             background: var(--bg-panel);
             padding: 30px;
             border-radius: 12px;
-            border-left: 3px solid #ff4757;
+            border-left: 4px solid #ff4757;
             transition: all 0.3s;
             position: relative;
             overflow: hidden;
         }
 
-        .pain-card::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.02), transparent);
-            pointer-events: none;
-        }
-
         .pain-card:hover { transform: translateY(-5px); background: #222; }
-        .pain-card h3 { color: #ff6b6b; margin-bottom: 12px; font-size: 1.2rem; font-family: 'Poppins', sans-serif; font-weight: 600; }
-        .pain-card p { font-size: 0.95rem; color: #ccc; }
+        .pain-card h3 { color: #ff6b6b; margin-bottom: 12px; font-size: 1.2rem; font-family: 'Montserrat', sans-serif; font-weight: 700; }
+        .pain-card p { font-size: 1rem; color: #ccc; line-height: 1.6; }
 
         /* Modules & Solution */
         .solution-section { padding: 80px 0; background: var(--bg-card); border-top: 1px solid #222; }
@@ -352,6 +359,7 @@
             border: 1px solid transparent;
             transition: all 0.3s;
             color: #ddd;
+            font-weight: 600;
         }
 
         .module-item:hover {
@@ -408,11 +416,11 @@
         .old-price { text-decoration: line-through; color: #666; font-size: 1.3rem; }
         .new-price { 
             font-size: 4rem; 
-            font-weight: 800; 
+            font-weight: 900; 
             color: var(--mint); 
             margin: 10px 0; 
             text-shadow: 0 0 30px rgba(152, 255, 216, 0.4);
-            font-family: 'Playfair Display', serif;
+            font-family: 'Montserrat', sans-serif;
         }
         .installments { font-size: 1.6rem; color: #fff; margin-bottom: 30px; font-weight: 600; }
 
@@ -447,9 +455,19 @@
         <div class="container">
             <span class="brand-name">Corpo dos Sonhos</span>
             <br>
-            <span class="badge-online">🔒 Método 100% Online • Aulas Gravadas • Acesso Vitalício</span>
+            <span class="badge-online">🔒 Método 100% Online • Aulas Gravadas • Válido por 1 Ano</span>
             
-            <h1 class="hero-title">Você olha no espelho e já não reconhece mais a mulher que vê?</h1>
+            <!-- NOVA HEADLINE CHAMATIVA -->
+            <h1 class="hero-title">
+                Imagine sua vida daqui a 20 dias...<br>
+                <span style="font-size: 0.7em; display: block; margin-top: 15px; font-weight: 700; color: var(--mint);">
+                    Ver a balança marcar até 10 kg a menos. Vestir aquela roupa que você ama e ver que ela ficou soltinha. Olhar no espelho e sentir orgulho da mulher do Corpo dos Sonhos que você se tornou. Recuperar o desejo e a confiança de estar com seu companheiro sem medo, sem vergonha e com a luz acesa.
+                </span>
+                <span style="font-size: 0.6em; display: block; margin-top: 20px; color: #fff; font-style: italic;">
+                    Isso não é um sonho distante. É o resultado do método certo.
+                </span>
+            </h1>
+            
             <p class="hero-subtitle">Elimine até 10 kg em apenas 20 dias, recupere sua autoestima e volte a se sentir desejada — <span class="highlight">sem dietas malucas e sem passar horas na academia.</span></p>
             
             <div class="vsl-container">
@@ -467,95 +485,30 @@
     <section class="slider-section">
         <div class="container">
             <div class="section-header">
-                <h2 style="color: var(--mint);">SUA TRANSFORMAÇÃO COMEÇA AGORA</h2>
-                <p>Arraste a barra e veja o poder do método <strong>Corpo dos Sonhos</strong> em 30 dias</p>
+                <h2 style="color: var(--mint);">SUA TRANSFORMAÇÃO EM 20 DIAS</h2>
+                <p>Arraste a barra e veja o poder do método <strong>Corpo dos Sonhos</strong></p>
             </div>
             
             <div class="slider-wrapper">
-                <!-- BEFORE SLIDE -->
-                <div class="slide-content" id="before-slide">
+                <!-- IMAGEM DEPOIS (FUNDO) -->
+                <!-- Substitua 'fotodepois.jpg' pelo caminho correto se estiver em subpasta -->
+                <div class="slide-image" id="after-slide" style="background-image: url('fotodepois.jpg');"></div>
+                
+                <!-- IMAGEM ANTES (SOBREPOSTA) -->
+                <!-- Substitua 'fotoantes.jpg' pelo caminho correto se estiver em subpasta -->
+                <div class="slide-image" id="before-slide" style="background-image: url('fotoantes.jpg');">
                     <span class="slide-label label-before">HOJE</span>
-                    <!-- SVG Realista Antes -->
-                    <svg class="character-svg before-char" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="skinBefore" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#f5d0b5;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#e0b090;stop-opacity:1" />
-                            </linearGradient>
-                            <filter id="shadowSoft"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-opacity="0.3"/></filter>
-                        </defs>
-                        <!-- Corpo com curvas mais cheias -->
-                        <ellipse cx="200" cy="380" rx="95" ry="130" fill="url(#skinBefore)" filter="url(#shadowSoft)" />
-                        <!-- Cintura menos definida -->
-                        <path d="M130 350 Q 200 360 270 350" stroke="#d4a080" stroke-width="2" fill="none" opacity="0.6"/>
-                        <!-- Cabeça -->
-                        <circle cx="200" cy="160" r="55" fill="url(#skinBefore)" filter="url(#shadowSoft)" />
-                        <!-- Rosto Triste/Cansado -->
-                        <circle cx="180" cy="150" r="6" fill="#554030" />
-                        <circle cx="220" cy="150" r="6" fill="#554030" />
-                        <path d="M185 185 Q 200 175 215 185" stroke="#554030" stroke-width="3" fill="none" />
-                        <path d="M170 135 Q 180 125 190 135" stroke="#554030" stroke-width="2" fill="none" opacity="0.5"/> <!-- Olheiras/Sobrancelha caída -->
-                        <!-- Cabelo Simples -->
-                        <path d="M145 160 Q 140 100 200 90 Q 260 100 255 160 L 255 140 Q 200 130 145 140 Z" fill="#4a3020" />
-                        <!-- Braços caídos -->
-                        <path d="M120 220 Q 80 250 90 320" stroke="url(#skinBefore)" stroke-width="35" fill="none" stroke-linecap="round" filter="url(#shadowSoft)" />
-                        <path d="M280 220 Q 320 250 310 320" stroke="url(#skinBefore)" stroke-width="35" fill="none" stroke-linecap="round" filter="url(#shadowSoft)" />
-                        <!-- Roupa larga/escura -->
-                        <path d="M110 230 Q 200 210 290 230 L 280 380 Q 200 400 120 380 Z" fill="#333" opacity="0.9" />
-                        <!-- Pernas -->
-                        <rect x="165" y="480" width="35" height="110" fill="url(#skinBefore)" rx="15" filter="url(#shadowSoft)" />
-                        <rect x="200" y="480" width="35" height="110" fill="url(#skinBefore)" rx="15" filter="url(#shadowSoft)" />
-                        <!-- Barriga destacada visualmente pela roupa -->
-                        <path d="M130 280 Q 200 310 270 280" stroke="#222" stroke-width="2" fill="none" opacity="0.3" />
-                    </svg>
                 </div>
 
-                <!-- AFTER SLIDE -->
-                <div class="slide-content" id="after-slide" style="clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);">
-                    <span class="slide-label label-after" id="after-label">DAQUI A 30 DIAS</span>
-                    <!-- SVG Realista Depois -->
-                    <svg class="character-svg after-char" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="skinAfter" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#ffe0c2;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#f0c0a0;stop-opacity:1" />
-                            </linearGradient>
-                            <filter id="glow"><feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#98FFD8" flood-opacity="0.4"/></filter>
-                        </defs>
-                        <!-- Corpo Magro e Definido -->
-                        <ellipse cx="200" cy="380" rx="60" ry="120" fill="url(#skinAfter)" filter="url(#glow)" />
-                        <!-- Cintura Marcada -->
-                        <path d="M150 340 Q 200 330 250 340" stroke="#d4a080" stroke-width="2" fill="none" opacity="0.4"/>
-                        <!-- Cabeça -->
-                        <circle cx="200" cy="160" r="50" fill="url(#skinAfter)" filter="url(#glow)" />
-                        <!-- Rosto Feliz/Radiante -->
-                        <circle cx="182" cy="150" r="5" fill="#554030" />
-                        <circle cx="218" cy="150" r="5" fill="#554030" />
-                        <path d="M180 180 Q 200 200 220 180" stroke="#d65a5a" stroke-width="3" fill="none" /> <!-- Sorriso -->
-                        <circle cx="175" cy="170" r="3" fill="#ff9999" opacity="0.6"/> <!-- Blush -->
-                        <circle cx="225" cy="170" r="3" fill="#ff9999" opacity="0.6"/>
-                        <!-- Cabelo Arrumado/Brilhante -->
-                        <path d="M150 160 Q 145 90 200 80 Q 255 90 250 160 L 250 200 Q 200 210 150 200 Z" fill="#8B4513" />
-                        <!-- Braços levantados (Vitória) -->
-                        <path d="M130 220 Q 90 150 110 120" stroke="url(#skinAfter)" stroke-width="30" fill="none" stroke-linecap="round" filter="url(#glow)" />
-                        <path d="M270 220 Q 310 150 290 120" stroke="url(#skinAfter)" stroke-width="30" fill="none" stroke-linecap="round" filter="url(#glow)" />
-                        <!-- Roupa Fitness Justa/Verde Menta -->
-                        <path d="M145 230 Q 200 220 255 230 L 250 360 Q 200 370 150 360 Z" fill="#98FFD8" opacity="0.9" />
-                        <!-- Pernas Firmes -->
-                        <rect x="175" y="470" width="25" height="120" fill="url(#skinAfter)" rx="12" filter="url(#glow)" />
-                        <rect x="200" y="470" width="25" height="120" fill="url(#skinAfter)" rx="12" filter="url(#glow)" />
-                        <!-- Detalhe de energia -->
-                        <path d="M240 130 L 245 120 L 250 130 L 260 130 L 250 140 L 250 150 L 240 140 L 230 140 Z" fill="#fff" opacity="0.8" />
-                    </svg>
-                </div>
+                <span class="slide-label label-after" id="after-label">DAQUI A 20 DIAS</span>
 
                 <div class="slider-controls">
-                    <span class="slider-icon">😞</span>
+                    <span style="color: #ff6b6b; font-weight: bold; font-size: 0.9rem;">ANTES</span>
                     <input type="range" min="0" max="100" value="0" id="transform-slider">
-                    <span class="slider-icon">😍</span>
+                    <span style="color: var(--mint); font-weight: bold; font-size: 0.9rem;">DEPOIS</span>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 20px; color: #666; font-size: 0.9rem;">Interaja para ver seu potencial</p>
+            <p style="text-align: center; margin-top: 20px; color: #666; font-size: 0.9rem;">Interaja para ver seu potencial real</p>
         </div>
     </section>
 
@@ -590,7 +543,7 @@
             </div>
 
             <div style="text-align: center; margin-top: 60px; background: linear-gradient(145deg, #1a1a1a, #0d0d0d); padding: 40px; border-radius: 20px; border: 1px solid #333;">
-                <h3 style="color: var(--mint); font-size: 1.8rem; margin-bottom: 20px; font-family: 'Playfair Display', serif;">A CULPA NÃO É SUA!</h3>
+                <h3 style="color: var(--mint); font-size: 1.8rem; margin-bottom: 20px; font-family: 'Montserrat', sans-serif;">A CULPA NÃO É SUA!</h3>
                 <p style="max-width: 800px; margin: 0 auto; color: #ccc; font-size: 1.05rem;">
                     O mercado tradicional te vendeu a mentira de que para emagrecer você precisa passar fome ou morar na academia. Eles te deram fórmulas prontas que não cabem na rotina real de uma mulher que tem filhos, casa e mil responsabilidades.
                     <br><br>
@@ -665,7 +618,7 @@
             </div>
 
             <div style="text-align: center; margin-top: 60px;">
-                <h3 style="font-size: 2rem; margin-bottom: 20px; color: #fff; font-family: 'Playfair Display', serif;">Imagine sua vida daqui a 20 dias...</h3>
+                <h3 style="font-size: 2rem; margin-bottom: 20px; color: #fff; font-family: 'Montserrat', sans-serif;">Imagine sua vida daqui a 20 dias...</h3>
                 <p style="max-width: 700px; margin: 0 auto; color: #ccc; font-size: 1.1rem; line-height: 1.8;">
                     Ver a balança marcar até 10 kg a menos. Vestir aquela roupa que você ama e ver que ela ficou soltinha. 
                     Olhar no espelho e sentir orgulho da mulher do <strong>Corpo dos Sonhos</strong> que você se tornou. 
@@ -681,7 +634,7 @@
         <div class="container">
             <div class="price-card">
                 <h3 style="color: #fff; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Oferta Especial de Lançamento</h3>
-                <p style="color: var(--mint); font-weight: 600; margin-bottom: 20px;">ACESSO VITALÍCIO AO CORPO DOS SONHOS</p>
+                <p style="color: var(--mint); font-weight: 600; margin-bottom: 20px;">ACESSO AO CORPO DOS SONHOS POR 1 ANO</p>
                 
                 <div style="margin: 30px 0;">
                     <p class="old-price">De R$ 758,00</p>
@@ -693,7 +646,7 @@
                 <ul style="text-align: left; margin: 30px 0; color: #ddd; list-style: none; padding: 0 20px;">
                     <li style="margin-bottom: 12px; display: flex; align-items: start;">
                         <span style="color: var(--mint); margin-right: 10px;">✓</span> 
-                        <div><strong>Acesso Completo ao Curso Corpo dos Sonhos</strong><br><span style="font-size: 0.85rem; color: #888;">Aulas gravadas para assistir quando quiser</span></div>
+                        <div><strong>Acesso Completo ao Curso Corpo dos Sonhos</strong><br><span style="font-size: 0.85rem; color: #888;">Aulas gravadas para assistir quando quiser (1 ano)</span></div>
                     </li>
                     <li style="margin-bottom: 12px; display: flex; align-items: start;">
                         <span style="color: var(--mint); margin-right: 10px;">✓</span> 
@@ -727,7 +680,7 @@
             </div>
 
             <div style="margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto; text-align: left; border-top: 1px solid #333; padding-top: 30px;">
-                <h3 style="color: #fff; margin-bottom: 20px; font-family: 'Playfair Display', serif;">Você tem duas escolhas agora:</h3>
+                <h3 style="color: #fff; margin-bottom: 20px; font-family: 'Montserrat', sans-serif;">Você tem duas escolhas agora:</h3>
                 <p style="margin-bottom: 15px; color: #ccc;"><strong style="color: #ff6b6b;">Escolha 1:</strong> Fechar esta página e continuar exatamente onde está. Aceitar a vergonha do próprio corpo, a falta de libido, o inchaço diário e a frustração de não conseguir emagrecer.</p>
                 <p style="color: #ccc;"><strong style="color: var(--mint);">Escolha 2:</strong> Tomar a decisão de transformar sua vida hoje. Dar o primeiro passo para eliminar até 10 kg em 20 dias e resgatar a mulher confiante e atraente que está escondida aí dentro com o <strong>Corpo dos Sonhos</strong>.</p>
             </div>
@@ -736,7 +689,7 @@
 
     <footer>
         <div class="container">
-            <h4 style="color: #666; margin-bottom: 10px; font-family: 'Playfair Display', serif;">Corpo dos Sonhos</h4>
+            <h4 style="color: #666; margin-bottom: 10px; font-family: 'Montserrat', sans-serif;">Corpo dos Sonhos</h4>
             <p>&copy; 2023 Todos os direitos reservados.</p>
             <p style="margin-top: 15px; font-size: 0.7rem; color: #333; max-width: 600px; margin-left: auto; margin-right: auto;">
                 Este site não faz parte do site do Facebook ou Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira. FACEBOOK é uma marca comercial da FACEBOOK, Inc.
@@ -746,28 +699,24 @@
 
     <script>
         const slider = document.getElementById('transform-slider');
-        const afterSlide = document.getElementById('after-slide');
+        const beforeSlide = document.getElementById('before-slide');
         const afterLabel = document.getElementById('after-label');
-        const afterChar = document.querySelector('.after-char');
 
         slider.addEventListener('input', function() {
             const val = this.value;
             
-            // Move o clip-path para revelar a imagem "Depois"
-            afterSlide.style.clipPath = `polygon(0 0, ${val}% 0, ${val}% 100%, 0 100%)`;
+            // Lógica invertida para revelar o "Depois" (que está no fundo)
+            // Quando val = 0, mostramos 100% do Antes (clip-path 100%)
+            // Quando val = 100, mostramos 0% do Antes (clip-path 0%)
+            const clipValue = 100 - val;
             
-            // Efeito de fade no label
+            beforeSlide.style.clipPath = `polygon(0 0, ${clipValue}% 0, ${clipValue}% 100%, 0 100%)`;
+            
+            // Efeito de fade no label "Daqui a 20 dias"
             if(val > 10) {
                 afterLabel.style.opacity = 1;
             } else {
                 afterLabel.style.opacity = 0;
-            }
-
-            // Pequena animação de escala no personagem "Depois" para dar vida
-            if(val > 50) {
-                afterChar.style.transform = `scale(${1 + (val - 50) / 500})`;
-            } else {
-                afterChar.style.transform = `scale(1)`;
             }
         });
     </script>
