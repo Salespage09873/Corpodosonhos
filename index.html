@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corpo dos Sonhos | O Método Definitivo</title>
-    <!-- Fontes Montserrat (Títulos) e Open Sans (Texto) -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Fontes Montserrat e Open Sans para máxima legibilidade e impacto -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-dark: #050505;
             --bg-card: #121212;
             --bg-panel: #1a1a1a;
             --mint: #98FFD8;
-            --mint-glow: rgba(152, 255, 216, 0.15);
+            --yellow-highlight: #FFFF00; /* Amarelo Chamativo */
             --orange-btn: #FF7043;
             --orange-hover: #FF5722;
             --text-main: #f0f0f0;
             --text-muted: #a0a0a0;
-            --yellow-highlight: #FFEA00; /* Amarelo Chamativo */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -27,13 +26,12 @@
             color: var(--text-main);
             overflow-x: hidden;
             line-height: 1.6;
-            font-family: 'Open Sans', sans-serif; /* Texto legível */
+            font-family: 'Open Sans', sans-serif; /* Fonte fácil de ler */
             background-image: radial-gradient(circle at 50% 0%, #1a1a1a 0%, #050505 70%);
         }
 
         h1, h2, h3, h4 { 
-            font-family: 'Montserrat', sans-serif; /* Títulos chamativos */
-            font-weight: 800;
+            font-family: 'Montserrat', sans-serif; /* Fonte chamativa para títulos */
             line-height: 1.2;
         }
 
@@ -52,46 +50,43 @@
             font-weight: 900;
         }
 
-        .highlight { color: var(--mint); font-weight: 600; }
+        .highlight { color: var(--mint); font-weight: 700; }
+        .text-yellow { color: var(--yellow-highlight); font-weight: 800; text-shadow: 0 0 10px rgba(255, 255, 0, 0.3); }
         .text-orange { color: var(--orange-btn); font-weight: 700; }
-        .text-yellow { color: var(--yellow-highlight); font-weight: 700; }
 
-        /* Botão CTA Premium */
+        /* Botões de Compra */
         .btn-cta {
             display: inline-block;
             background: linear-gradient(45deg, var(--orange-btn), #ff9100);
             color: #fff;
-            padding: 20px 40px;
-            font-size: 1.1rem;
+            padding: 22px 40px;
+            font-size: 1.2rem;
+            font-family: 'Montserrat', sans-serif;
             font-weight: 800;
             text-transform: uppercase;
             text-decoration: none;
-            border-radius: 5px;
-            box-shadow: 0 0 25px rgba(255, 112, 67, 0.4);
+            border-radius: 8px;
+            box-shadow: 0 0 25px rgba(255, 112, 67, 0.5);
             transition: all 0.3s ease;
             text-align: center;
             width: 100%;
-            max-width: 550px;
+            max-width: 600px;
             position: relative;
             overflow: hidden;
             border: none;
             cursor: pointer;
             letter-spacing: 1px;
-            font-family: 'Montserrat', sans-serif;
             margin: 20px 0;
+            animation: pulse-btn 2s infinite;
         }
 
-        .btn-cta::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%;
-            width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            transition: 0.5s;
-        }
+        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 0 40px rgba(255, 112, 67, 0.8); }
 
-        .btn-cta:hover::before { left: 100%; }
-        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 0 40px rgba(255, 112, 67, 0.6); }
+        @keyframes pulse-btn {
+            0% { box-shadow: 0 0 0 0 rgba(255, 112, 67, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 112, 67, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 112, 67, 0); }
+        }
 
         /* Header Hero */
         header {
@@ -112,77 +107,30 @@
             border: 1px solid rgba(152, 255, 216, 0.3);
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            backdrop-filter: blur(5px);
-            font-family: 'Montserrat', sans-serif;
         }
 
         .hero-title {
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin-bottom: 20px;
             color: #fff;
-            text-shadow: 0 0 20px rgba(0,0,0,0.8);
+            font-weight: 900;
+            text-transform: uppercase;
         }
 
         .hero-subtitle {
-            font-size: 1.3rem;
-            color: var(--yellow-highlight); /* AMARELO CHAMATIVO */
+            font-size: 1.5rem;
+            color: var(--yellow-highlight);
             margin-bottom: 40px;
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
-        }
-
-        /* VSL Placeholder */
-        .vsl-container {
-            background: #000;
-            width: 100%;
-            max-width: 800px;
-            height: 450px;
-            margin: 0 auto 40px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #333;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .vsl-overlay {
-            position: absolute;
-            inset: 0;
-            background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.9) 100%);
-            z-index: 1;
-        }
-
-        .play-btn {
-            width: 80px;
-            height: 80px;
-            background: var(--orange-btn);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2;
-            cursor: pointer;
-            box-shadow: 0 0 30px var(--orange-btn);
-            animation: pulse-btn 2s infinite;
-        }
-
-        @keyframes pulse-btn {
-            0% { box-shadow: 0 0 0 0 rgba(255, 112, 67, 0.7); }
-            70% { box-shadow: 0 0 0 20px rgba(255, 112, 67, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 112, 67, 0); }
         }
 
         /* Slider Transformação com Fotos Reais */
         .slider-section {
-            padding: 80px 0;
+            padding: 60px 0;
             background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-card) 100%);
             border-top: 1px solid #222;
             border-bottom: 1px solid #222;
@@ -191,90 +139,59 @@
         .slider-wrapper {
             position: relative;
             width: 100%;
-            max-width: 700px;
-            height: 500px;
+            max-width: 800px;
+            height: 500px; /* Altura ajustada para fotos reais */
             margin: 0 auto;
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-            background: #1e1e1e;
-            border: 1px solid #333;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+            border: 2px solid #333;
         }
 
-        .slide-image {
+        .slide-img {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        #before-slide {
-            /* Foto ANTES */
-            background-image: url('fotoantes.jpg'); 
-            z-index: 1;
-        }
-
-        #after-slide {
-            /* Foto DEPOIS */
-            background-image: url('fotodepois.jpg');
-            z-index: 2;
-            clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+            object-fit: cover; /* Garante que a foto cubra todo o espaço sem distorcer */
+            pointer-events: none;
         }
 
         .slide-label {
             position: absolute;
-            top: 25px;
+            top: 20px;
             padding: 8px 20px;
             border-radius: 30px;
             font-weight: 800;
-            font-size: 0.9rem;
+            font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            backdrop-filter: blur(8px);
+            backdrop-filter: blur(5px);
             z-index: 10;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             font-family: 'Montserrat', sans-serif;
         }
 
-        .label-before { 
-            left: 25px; 
-            color: #ff6b6b; 
-            background: rgba(255, 107, 107, 0.15);
-            border: 1px solid rgba(255, 107, 107, 0.4);
-        }
-
-        .label-after { 
-            right: 25px; 
-            color: var(--mint); 
-            background: rgba(152, 255, 216, 0.15);
-            border: 1px solid rgba(152, 255, 216, 0.4);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
+        .label-before { left: 20px; color: #ff6b6b; background: rgba(0,0,0,0.7); border: 1px solid #ff6b6b; }
+        .label-after { right: 20px; color: var(--mint); background: rgba(0,0,0,0.7); border: 1px solid var(--mint); opacity: 0; transition: opacity 0.3s; }
 
         .slider-controls {
             position: absolute;
-            bottom: 40px;
+            bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
-            width: 85%;
+            width: 80%;
             z-index: 20;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            padding: 20px 30px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 15px 25px;
             border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             display: flex;
             align-items: center;
             gap: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-
-        .slider-icon { font-size: 1.2rem; color: var(--text-muted); }
 
         input[type="range"] {
             flex: 1;
@@ -285,24 +202,20 @@
 
         input[type="range"]::-webkit-slider-thumb {
             -webkit-appearance: none;
-            height: 28px;
-            width: 28px;
+            height: 30px;
+            width: 30px;
             border-radius: 50%;
             background: var(--orange-btn);
             cursor: pointer;
-            margin-top: -12px;
-            box-shadow: 0 0 15px var(--orange-btn), inset 0 0 5px rgba(255,255,255,0.5);
+            margin-top: -13px;
+            box-shadow: 0 0 15px var(--orange-btn), inset 0 0 5px rgba(255,255,255,0.8);
             border: 2px solid #fff;
-            transition: transform 0.2s;
         }
-
-        input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); }
 
         input[type="range"]::-webkit-slider-runnable-track {
             width: 100%;
             height: 4px;
-            cursor: pointer;
-            background: #444;
+            background: #fff;
             border-radius: 2px;
         }
 
@@ -310,12 +223,12 @@
         .pain-section { padding: 80px 0; background: var(--bg-dark); }
         
         .section-header { text-align: center; margin-bottom: 60px; }
-        .section-header h2 { font-size: 2.2rem; color: #fff; margin-bottom: 15px; }
-        .section-header p { color: var(--text-muted); max-width: 700px; margin: 0 auto; }
+        .section-header h2 { font-size: 2.5rem; color: #fff; margin-bottom: 15px; font-weight: 800; }
+        .section-header p { color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
 
         .pain-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
         }
 
@@ -323,15 +236,13 @@
             background: var(--bg-panel);
             padding: 30px;
             border-radius: 12px;
-            border-left: 3px solid #ff4757;
+            border-left: 4px solid #ff4757;
             transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
         }
 
         .pain-card:hover { transform: translateY(-5px); background: #222; }
-        .pain-card h3 { color: #ff6b6b; margin-bottom: 12px; font-size: 1.2rem; font-family: 'Montserrat', sans-serif; font-weight: 700; }
-        .pain-card p { font-size: 0.95rem; color: #ccc; }
+        .pain-card h3 { color: #ff6b6b; margin-bottom: 12px; font-size: 1.2rem; font-weight: 700; font-family: 'Montserrat', sans-serif; }
+        .pain-card p { font-size: 1rem; color: #ddd; }
 
         /* Modules & Solution */
         .solution-section { padding: 80px 0; background: var(--bg-card); border-top: 1px solid #222; }
@@ -341,7 +252,6 @@
             padding: 50px;
             border-radius: 24px;
             border: 1px solid #333;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
         }
 
         .modules-grid {
@@ -361,22 +271,12 @@
             border: 1px solid transparent;
             transition: all 0.3s;
             color: #ddd;
+            font-weight: 600;
         }
 
-        .module-item:hover {
-            border-color: var(--mint);
-            background: rgba(152, 255, 216, 0.05);
-            color: #fff;
-            transform: translateX(5px);
-        }
-
-        .module-icon {
-            color: var(--mint);
-            margin-right: 12px;
-            font-size: 1.3rem;
-            min-width: 25px;
-        }
-
+        .module-item:hover { border-color: var(--mint); background: rgba(152, 255, 216, 0.05); color: #fff; }
+        .module-icon { color: var(--mint); margin-right: 12px; font-size: 1.3rem; }
+        
         .bonus-tag {
             background: linear-gradient(45deg, #FFD700, #FFA500);
             color: #000;
@@ -433,6 +333,58 @@
             border: 1px dashed #444;
         }
 
+        /* SEÇÃO DE ESCOLHAS (DESTAQUE MÁXIMO) */
+        .choices-section {
+            margin-top: 80px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            background: linear-gradient(145deg, #1a0505, #000);
+            padding: 50px;
+            border-radius: 20px;
+            border: 2px solid #ff4757;
+            box-shadow: 0 0 50px rgba(255, 71, 87, 0.2);
+            text-align: left;
+        }
+
+        .choices-title {
+            font-size: 2.2rem;
+            color: #fff;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .choice-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .choice-bad {
+            background: rgba(255, 71, 87, 0.1);
+            border-left: 5px solid #ff4757;
+            color: #ffcccc;
+        }
+
+        .choice-good {
+            background: rgba(152, 255, 216, 0.1);
+            border-left: 5px solid var(--mint);
+            color: #ccffea;
+        }
+
+        .choice-strong {
+            font-weight: 800;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
         footer {
             background: #000;
             padding: 50px 0;
@@ -444,10 +396,12 @@
 
         @media (max-width: 768px) {
             .hero-title { font-size: 2rem; }
-            .hero-subtitle { font-size: 1.1rem; }
+            .hero-subtitle { font-size: 1.2rem; }
             .slider-wrapper { height: 400px; }
             .new-price { font-size: 3rem; }
             .method-box { padding: 30px 20px; }
+            .choices-section { padding: 30px 20px; }
+            .choices-title { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -459,22 +413,14 @@
             <br>
             <span class="badge-online">🔒 Método 100% Online • Aulas Gravadas • Válido por 1 Ano</span>
             
-            <!-- HEADLINE ALTERADA -->
+            <!-- NOVA HEADLINE SOLICITADA -->
             <h1 class="hero-title">Você olha no espelho e já não reconhece mais a mulher que vê?</h1>
             
             <!-- SUBTÍTULO EM AMARELO CHAMATIVO -->
             <p class="hero-subtitle">Imagine sua vida daqui a 20 dias...</p>
             
-            <div class="vsl-container">
-                <div class="vsl-overlay"></div>
-                <div class="play-btn">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-                <p style="position: absolute; bottom: 20px; color: #fff; font-weight: 600; letter-spacing: 1px; z-index: 2;">ASSISTA À APRESENTAÇÃO DO MÉTODO</p>
-            </div>
-
-            <!-- BOTÃO DE COMPRA 1 -->
-            <a href="#offer" class="btn-cta">QUERO TRANSFORMAR MEU CORPO E MINHA VIDA AGORA!</a>
+            <!-- BOTÃO DE AÇÃO IMEDIATA -->
+            <a href="https://pay.kiwify.com.br/kUMJyF2" class="btn-cta">Quero perder 10kg em 20 dias</a>
         </div>
     </header>
 
@@ -486,27 +432,26 @@
             </div>
             
             <div class="slider-wrapper">
-                <!-- SLIDE ANTES (Foto do repositório) -->
-                <div class="slide-image" id="before-slide">
-                    <span class="slide-label label-before">HOJE</span>
-                </div>
+                <!-- FOTO ANTES (Carregando do repositório) -->
+                <img src="fotoantes.jpg" alt="Antes" class="slide-img" id="before-img">
+                <span class="slide-label label-before">HOJE</span>
 
-                <!-- SLIDE DEPOIS (Foto do repositório) -->
-                <div class="slide-image" id="after-slide">
-                    <span class="slide-label label-after" id="after-label">DAQUI A 20 DIAS</span>
+                <!-- FOTO DEPOIS (Carregando do repositório) -->
+                <div id="after-overlay" style="position: absolute; top: 0; left: 0; width: 0%; height: 100%; overflow: hidden; border-right: 2px solid #fff; z-index: 5;">
+                    <img src="fotodepois.jpg" alt="Depois" class="slide-img" style="width: 800px; max-width: none; left: 0;" id="after-img">
                 </div>
+                <span class="slide-label label-after" id="after-label">DAQUI A 20 DIAS</span>
 
                 <div class="slider-controls">
-                    <span class="slider-icon">😞</span>
+                    <span style="color: #ff6b6b; font-weight: bold;">😞</span>
                     <input type="range" min="0" max="100" value="0" id="transform-slider">
-                    <span class="slider-icon">😍</span>
+                    <span style="color: var(--mint); font-weight: bold;">😍</span>
                 </div>
             </div>
             <p style="text-align: center; margin-top: 20px; color: #666; font-size: 0.9rem;">Interaja para ver seu potencial</p>
             
-            <!-- BOTÃO DE COMPRA 2 (NOVO) -->
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="#offer" class="btn-cta" style="max-width: 400px; font-size: 1rem;">QUERO PERDER 10KG EM 20 DIAS</a>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="https://pay.kiwify.com.br/kUMJyF2" class="btn-cta" style="max-width: 400px; font-size: 1rem; padding: 15px 30px;">Adquira aqui</a>
             </div>
         </div>
     </section>
@@ -515,42 +460,40 @@
         <div class="container">
             <div class="section-header">
                 <h2>Se você chegou até aqui, é porque <span class="text-orange">CANSOU</span>...</h2>
-                <p>Cansou de tentar de tudo. Cansou de ver o tempo passar e continuar presa em um corpo que não parece seu. A verdade é dura: a falta de peso ideal não está tirando apenas a sua saúde, está tirando a sua vida de você.</p>
+                <p>Cansou de tentar de tudo. Cansou de ver o tempo passar e continuar presa em um corpo que não parece seu.</p>
             </div>
 
             <div class="pain-grid">
                 <div class="pain-card">
                     <h3>❤️ Vida Íntima Esfriou?</h3>
-                    <p>Você evita o contato, apaga a luz na hora de se trocar ou sente vergonha até de colocar uma lingerie porque odeia o que vê no espelho?</p>
+                    <p>Você evita o contato, apaga a luz na hora de se trocar ou sente vergonha até de colocar uma lingerie?</p>
                 </div>
                 <div class="pain-card">
                     <h3>☀️ O Verão virou Pesadelo?</h3>
-                    <p>A simples ideia de colocar um biquíni e ir à praia te dá ansiedade só de pensar no julgamento dos outros?</p>
+                    <p>A simples ideia de colocar um biquíni e ir à praia te dá ansiedade só de pensar no julgamento?</p>
                 </div>
                 <div class="pain-card">
                     <h3>😞 Culpa Diária?</h3>
-                    <p>Você cuida de todos, mas quando olha para si mesma, sente que sobrou apenas o cansaço e a frustração?</p>
+                    <p>Você cuida de todos, mas quando olha para si mesma, sente que sobrou apenas o cansaço?</p>
                 </div>
                 <div class="pain-card">
                     <h3>🔒 Corpo "Travado"?</h3>
-                    <p>Vive inchada, intestino preso, ansiosa, descontando o estresse na comida, vendo seu cabelo cair e energia sumir?</p>
+                    <p>Vive inchada, intestino preso, ansiosa, descontando o estresse na comida?</p>
                 </div>
                 <div class="pain-card">
                     <h3>👖 Roupas Não Servem?</h3>
-                    <p>Aquele jeans favorito continua guardado no fundo do armário há anos, enquanto você só usa roupas largas?</p>
+                    <p>Aquele jeans favorito continua guardado no fundo do armário há anos?</p>
                 </div>
             </div>
 
             <div style="text-align: center; margin-top: 60px; background: linear-gradient(145deg, #1a1a1a, #0d0d0d); padding: 40px; border-radius: 20px; border: 1px solid #333;">
-                <h3 style="color: var(--mint); font-size: 1.8rem; margin-bottom: 20px; font-family: 'Montserrat', sans-serif;">A CULPA NÃO É SUA!</h3>
-                <p style="max-width: 800px; margin: 0 auto; color: #ccc; font-size: 1.05rem;">
-                    O mercado tradicional te vendeu a mentira de que para emagrecer você precisa passar fome ou morar na academia. Eles te deram fórmulas prontas que não cabem na rotina real de uma mulher que tem filhos, casa e mil responsabilidades.
+                <h3 style="color: var(--mint); font-size: 1.8rem; margin-bottom: 20px; font-family: 'Montserrat', sans-serif; font-weight: 800;">A CULPA NÃO É SUA!</h3>
+                <p style="max-width: 800px; margin: 0 auto; color: #ccc; font-size: 1.1rem;">
+                    O mercado tradicional te vendeu a mentira de que para emagrecer você precisa passar fome. 
                     <br><br>
-                    <strong style="color: #fff; font-size: 1.2rem;">O Método Corpo dos Sonhos foi feito para a SUA realidade.</strong>
+                    <strong style="color: #fff; font-size: 1.3rem;">O Método Corpo dos Sonhos foi feito para a SUA realidade.</strong>
                 </p>
-                
-                <!-- BOTÃO DE COMPRA 3 (NOVO) -->
-                <a href="#offer" class="btn-cta" style="max-width: 350px; margin-top: 30px;">ADQUIRA AQUI</a>
+                <a href="https://pay.kiwify.com.br/kUMJyF2" class="btn-cta" style="margin-top: 30px;">Quero adquirir agora</a>
             </div>
         </div>
     </section>
@@ -561,7 +504,7 @@
                 <div style="text-align: center; margin-bottom: 40px;">
                     <span class="brand-name" style="font-size: 1.2rem;">O Que Você Vai Encontrar no</span>
                     <h2 style="color: var(--mint); font-size: 2.5rem; margin-top: 10px;">Corpo dos Sonhos</h2>
-                    <p style="color: #aaa; margin-top: 15px;">Um programa definitivo focado em destravar seu metabolismo e regular seu intestino através da alimentação inteligente.</p>
+                    <p style="color: #aaa; margin-top: 15px;">Um programa definitivo focado em destravar seu metabolismo através da alimentação inteligente.</p>
                 </div>
                 
                 <div class="modules-grid">
@@ -618,17 +561,6 @@
                     </div>
                 </div>
             </div>
-
-            <div style="text-align: center; margin-top: 60px;">
-                <h3 style="font-size: 2rem; margin-bottom: 20px; color: #fff; font-family: 'Montserrat', sans-serif;">Imagine sua vida daqui a 20 dias...</h3>
-                <!-- TEXTO REMOVIDO CONFORME SOLICITADO -->
-                <p style="max-width: 700px; margin: 0 auto; color: #ccc; font-size: 1.1rem; line-height: 1.8;">
-                    <strong style="color: var(--mint);">Isso não é um sonho distante. É o resultado do método certo.</strong>
-                </p>
-                
-                <!-- BOTÃO DE COMPRA 4 (NOVO) -->
-                <a href="#offer" class="btn-cta" style="max-width: 400px; margin-top: 30px;">QUERO ADQUIRIR AGORA</a>
-            </div>
         </div>
     </section>
 
@@ -668,12 +600,12 @@
                     </li>
                 </ul>
 
-                <a href="#" class="btn-cta">SIM! QUERO ELIMINAR ATÉ 10 KG EM 20 DIAS!</a>
+                <a href="https://pay.kiwify.com.br/kUMJyF2" class="btn-cta">SIM! QUERO ELIMINAR ATÉ 10 KG AGORA!</a>
                 
                 <div class="guarantee-box">
                     <img src="https://img.icons8.com/color/96/guarantee.png" alt="Garantia" style="width: 60px; filter: invert(1); margin-bottom: 10px;">
                     <p style="font-weight: bold; color: var(--mint); font-size: 1.1rem;">GARANTIA INCONDICIONAL DE 7 DIAS</p>
-                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 5px;">Risco Zero. Se não gostar, devolvo 100% do seu dinheiro. Sem perguntas.</p>
+                    <p style="font-size: 0.9rem; color: #aaa; margin-top: 5px;">Risco Zero. Se não gostar, devolvo 100% do seu dinheiro.</p>
                 </div>
 
                 <p style="font-size: 0.8rem; color: #555; margin-top: 20px;">
@@ -681,34 +613,61 @@
                 </p>
             </div>
 
-            <div style="margin-top: 60px; max-width: 800px; margin-left: auto; margin-right: auto; text-align: left; border-top: 1px solid #333; padding-top: 30px;">
-                <h3 style="color: #fff; margin-bottom: 20px; font-family: 'Montserrat', sans-serif;">Você tem duas escolhas agora:</h3>
-                <p style="margin-bottom: 15px; color: #ccc;"><strong style="color: #ff6b6b;">Escolha 1:</strong> Fechar esta página e continuar exatamente onde está. Aceitar a vergonha do próprio corpo, a falta de libido, o inchaço diário e a frustração de não conseguir emagrecer.</p>
-                <p style="color: #ccc;"><strong style="color: var(--mint);">Escolha 2:</strong> Tomar a decisão de transformar sua vida hoje. Dar o primeiro passo para eliminar até 10 kg em 20 dias e resgatar a mulher confiante e atraente que está escondida aí dentro com o <strong>Corpo dos Sonhos</strong>.</p>
+            <!-- SEÇÃO DE ESCOLHAS COM DESTAQUE MÁXIMO (SUBSTITUINDO O VÍDEO) -->
+            <div class="choices-section">
+                <h3 class="choices-title">Você tem duas escolhas agora:</h3>
+                
+                <div class="choice-item choice-bad">
+                    <span class="choice-strong" style="color: #ff4757;">Escolha 1: Continuar Onde Está</span>
+                    Fechar esta página e aceitar a vergonha do próprio corpo, a falta de libido, o inchaço diário e a frustração de não conseguir emagrecer. Deixar mais um dia passar sem mudar nada.
+                </div>
+
+                <div class="choice-item choice-good">
+                    <span class="choice-strong" style="color: var(--mint);">Escolha 2: Transformar Sua Vida Hoje</span>
+                    Tomar a decisão de mudar. Dar o primeiro passo para eliminar até 10 kg em 20 dias e resgatar a mulher confiante e atraente que está escondida aí dentro com o <strong>Corpo dos Sonhos</strong>.
+                </div>
+
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="https://pay.kiwify.com.br/kUMJyF2" class="btn-cta" style="font-size: 1.3rem; padding: 25px 50px;">QUERO FAZER A ESCOLHA CERTA AGORA!</a>
+                    <p style="margin-top: 15px; color: #888; font-size: 0.9rem;">Clique acima para garantir sua vaga com desconto</p>
+                </div>
             </div>
+
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <h4 style="color: #666; margin-bottom: 10px; font-family: 'Montserrat', sans-serif;">Corpo dos Sonhos</h4>
+            <h4 style="color: #666; margin-bottom: 10px; font-family: 'Montserrat', sans-serif; font-weight: 700;">Corpo dos Sonhos</h4>
             <p>&copy; 2023 Todos os direitos reservados.</p>
             <p style="margin-top: 15px; font-size: 0.7rem; color: #333; max-width: 600px; margin-left: auto; margin-right: auto;">
-                Este site não faz parte do site do Facebook ou Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira. FACEBOOK é uma marca comercial da FACEBOOK, Inc.
+                Este site não faz parte do site do Facebook ou Facebook Inc. Além disso, este site NÃO é endossado pelo Facebook de nenhuma maneira.
             </p>
         </div>
     </footer>
 
     <script>
         const slider = document.getElementById('transform-slider');
-        const afterSlide = document.getElementById('after-slide');
+        const afterOverlay = document.getElementById('after-overlay');
         const afterLabel = document.getElementById('after-label');
+        const afterImg = document.getElementById('after-img');
+        const sliderWrapper = document.querySelector('.slider-wrapper');
+
+        // Função para ajustar a largura da imagem interna para corresponder à largura do container
+        function updateImageWidth() {
+            const width = sliderWrapper.offsetWidth;
+            afterImg.style.width = width + 'px';
+        }
+
+        // Atualiza no load e no resize
+        window.addEventListener('load', updateImageWidth);
+        window.addEventListener('resize', updateImageWidth);
 
         slider.addEventListener('input', function() {
             const val = this.value;
             
-            // Move o clip-path para revelar a imagem "Depois"
-            afterSlide.style.clipPath = `polygon(0 0, ${val}% 0, ${val}% 100%, 0 100%)`;
+            // Move a sobreposição da imagem "Depois"
+            afterOverlay.style.width = val + '%';
             
             // Efeito de fade no label
             if(val > 10) {
